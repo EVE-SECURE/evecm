@@ -1,0 +1,73 @@
+<html>
+<head><title>Eve counter settings</title>
+<script type="text/javascript">
+
+function save_options() {
+  localStorage["userid"] = document.getElementById("uid").value;
+  localStorage["apikey"] = document.getElementById("key").value;
+  localStorage["characterid"] = document.getElementById("chars").children[document.getElementById("chars").selectedIndex].value;
+  localStorage["charactername"] = document.getElementById("chars").children[document.getElementById("chars").selectedIndex].innerHTML;
+
+  var status = document.getElementById("status");
+  status.innerHTML = "Options Saved.";
+  setTimeout(function() {
+    status.innerHTML = "";
+  }, 750);
+}
+
+// Restores select box state to saved value from localStorage.
+function restore_options() {
+  var uid = localStorage["userid"];
+  var key = localStorage["apikey"];
+  var characterID = localStorage["characterid"];
+  var characterName = localStorage["charactername"];
+  if (!uid || !key || !characterID || !characterName) {
+    return;
+  }
+  document.getElementById("uid").value = uid;
+  document.getElementById("key").value = key;
+  var character = document.createElement("option");
+  character.value = characterID;
+  character.innerHTML = characterName;
+  document.getElementById("chars").appendChild(character);
+}
+
+
+
+function get_chars () {
+var req = new XMLHttpRequest();
+
+  var uid = document.getElementById("uid").value;
+  var key = document.getElementById("key").value;
+  document.getElementById("chars").innerHTML="";
+  req.open("GET", "http://api.eve-online.com/account/Characters.xml.aspx?"+"userID="+uid+"&apiKey="+key, true);
+   req.onload = function(){
+        var xml = req.responseXML;
+        var chars = xml.getElementsByTagName('row');
+	for (var i=0, char; char = chars[i]; i++) {
+		var character = document.createElement("option");
+		character.value = char.getAttribute("characterID");
+		character.innerHTML = char.getAttribute("name");
+		document.getElementById("chars").appendChild(character);
+	}
+    };
+
+   req.send(null);
+
+}
+
+
+</script>
+</head>
+
+<body onload="restore_options()">
+
+Eve API key:<br>
+<input type="text" id="uid" size="15"><br>
+<input type="text" id="key" size="100"><br>
+<select id="chars"></select><br>
+<button onclick="save_options()">Save</button>
+<button onclick="get_chars()">Get</button>
+<span id="status"></span><br>
+</body>
+</html>
