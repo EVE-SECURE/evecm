@@ -1,5 +1,6 @@
 var compteur =[];
-            var tabcouleurfind = new Array();
+var digit_del = ",";
+var tabcouleurfind = new Array();
             var apiserver = "http://api.eve-online.com";
 
             var msPerDay = 24 * 60 * 60 * 1000;
@@ -288,7 +289,7 @@ function recupInfosPerso() {
 
 
     document.getElementById("idName").innerText = name;
-    document.getElementById("idBalance").innerText = balance;
+    document.getElementById("idBalance").innerHTML = balance;
 
     for (var i = 0, row; row = listGroup[i]; i++) {
         if (row.childNodes.length > 1) {
@@ -321,7 +322,7 @@ function getGroupIDBySkillID(idSkill) {
 
 function delim(st) {
     var trSt = st+'';
-    return trSt.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
+    return trSt.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1'+digit_del);
 }
 
 function getMaxSP(lv,rank) {
