@@ -8,7 +8,7 @@ body {
   color:white;
 }
 #idListeSkillsConnus table {
-    width:92%;
+    width:98%;
     border-collapse: collapse;
 }
 
@@ -37,9 +37,6 @@ th.header:hover {
 td.skillName{
     font-family: Arial, Helvetica, sans-serif;
 font-size: 11px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
 padding-left: 30px;
 }
 td.skillLv {
@@ -50,14 +47,21 @@ tr.nd {
     display:none;
 }
 
+span.spsumm{
+    color: #FA9E0E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left:4px;
+}
 </style>
-    <script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
 <script>
 function init() {
     var res = chrome.extension.getBackgroundPage().document.getElementById('main');
     document.getElementById('i').innerHTML = res.innerHTML;
     $("th.header").live('click', function(){
-        $(this).parent().parent().find('tr.skill').toggleClass("nd");
+           $(this).parent().parent().find('tr.skill').toggleClass("nd");
     });
 }
 </script>
