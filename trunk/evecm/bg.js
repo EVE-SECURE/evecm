@@ -197,16 +197,18 @@ function toRoman(d) {
 
 
 function recupInfosPerso() {
-    var nameList = reqCharacterSheet.responseXML.getElementsByTagName("name");
-    var balanceList = reqCharacterSheet.responseXML.getElementsByTagName("balance");
+    var name = reqCharacterSheet.responseXML.getElementsByTagName("name")[0].textContent;
+    var balance = reqCharacterSheet.responseXML.getElementsByTagName("balance")[0].textContent;
+    var corpName = reqCharacterSheet.responseXML.getElementsByTagName("corporationName")[0].textContent;
+    var allyName = reqCharacterSheet.responseXML.getElementsByTagName("allianceName")[0].textContent;
     var rowsetList = reqCharacterSheet.responseXML.getElementsByTagName("rowset");
 
-    var nameElement = nameList[0];
-    var balanceElement = balanceList[0];
+    var portrait = document.createElement('img');
+    portrait.setAttribute('src', 'http://image.eveonline.com/Character/'+characterid+'_64.jpg');
+
+
     var rowsetSkillsElement = rowsetList[0];
 
-    var name = nameElement.textContent;
-    var balance = delim(balanceElement.textContent);
 
 
     // Groups
@@ -295,7 +297,11 @@ function recupInfosPerso() {
     }
 
     document.getElementById("idName").innerText = name;
-    document.getElementById("idBalance").innerHTML = balance;
+    document.getElementById("idCorp").innerText = corpName;
+    document.getElementById("idAlly").innerText = allyName;
+    document.getElementById("idBalance").innerText = delim(balance)+" ISK";
+    document.getElementById('portrait').appendChild(portrait);
+
 
     for (var i = 0, row; row = listGroup[i]; i++) {
         if (row.childNodes.length > 1) {

@@ -8,32 +8,12 @@
     <body onload="init()">
         <div id="main">
         <table width="100%">
-        <tr>
-            <td>
-                Character :
-            </td>
-            <td>
-                <div id="idName" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Balance :
-            </td>
-            <td>
-                <div id="idBalance" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <div id="idSkillInTraining" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <div id="idListeSkillsConnus" />
-            </td>
-        </tr>
+        <tr class="info"><td rowspan="4"><span id="portrait"/></td><td>Character: <span id="idName" /></td></tr>
+        <tr class="info"><td>Balance: <span id="idBalance" /></td></tr>
+        <tr class="info"><td>Corporation: <span id="idCorp" /></td></tr>
+        <tr class="info"><td>Alliance: <span id="idAlly" /></td></tr>
+        <tr><td colspan="2"><div id="idSkillInTraining" /></td></tr>
+        <tr><td colspan="2"><div id="idListeSkillsConnus" /></td></tr>
     </table>
 </div>
     </body>
