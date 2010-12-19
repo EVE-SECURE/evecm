@@ -7,6 +7,11 @@ function save_options() {
   localStorage["apikey"] = document.getElementById("key").value;
   localStorage["characterid"] = document.getElementById("chars").children[document.getElementById("chars").selectedIndex].value;
   localStorage["charactername"] = document.getElementById("chars").children[document.getElementById("chars").selectedIndex].innerHTML;
+  if (document.getElementById('seconds').checked == true) {
+      localStorage['seconds'] = 1000;
+  } else{
+      localStorage['seconds'] = 60000;
+  }
 
   var status = document.getElementById("status");
   status.innerHTML = "Options Saved.";
@@ -30,6 +35,9 @@ function restore_options() {
   character.value = characterID;
   character.innerHTML = characterName;
   document.getElementById("chars").appendChild(character);
+  if (localStorage['seconds'] == 1000) {
+      document.getElementById('seconds').checked = true;
+  } 
 }
 
 
@@ -66,6 +74,7 @@ Eve API key:<br>
 <input type="text" id="uid" size="15"><br>
 <input type="text" id="key" size="100"><br>
 <select id="chars"></select><br>
+<input type="checkbox" id="seconds"> Display seconds in tooltip count<br>
 <button onclick="save_options()">Save</button>
 <button onclick="get_chars()">Get</button>
 <span id="status"></span><br>
