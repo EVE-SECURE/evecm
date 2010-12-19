@@ -20,6 +20,7 @@ var skillQueue = new XMLHttpRequest();
 var apikey = localStorage["apikey"];
 var userid = localStorage["userid"];
 var characterid = localStorage["characterid"];
+var cycleWait = localStorage['seconds'];
 
 function init() {
     skillTreeRequest.open("GET", "skillTree.xml", false);
@@ -51,7 +52,7 @@ function refreshDateFin() {
     chrome.browserAction.setBadgeBackgroundColor({
         color: compteur[2]
     });
-    setTimeout("refreshDateFin()", 1000)
+    setTimeout("refreshDateFin()",cycleWait )
 }
 
 function drawQueue() {
@@ -120,7 +121,7 @@ function differenceDates(d) {
     if (jours > 0) {
         timeBetween = timeBetween - (jours * msPerDay);
         ret[0] = jours + "d";
-        ret[1] = jours + " days, ";
+        ret[1] = jours + " days,  ";
         ret[2] = [30, 60, 150, 230];
         stop = 1;
     }
@@ -128,7 +129,7 @@ function differenceDates(d) {
     var heures = Math.floor(timeBetween / msPerHour);
     if (heures > 0) {
         timeBetween = timeBetween - (heures * msPerHour);
-        ret[1] = ret[1] + heures + " hours, ";
+        ret[1] = ret[1] + heures + " hours,  ";
         if (stop == 0) {
             ret[0] = heures + "h";
             ret[2] = [255, 20, 20, 230];
@@ -139,21 +140,22 @@ function differenceDates(d) {
     var minutes = Math.floor(timeBetween / msPerMinutes);
     if (minutes > 0) {
         timeBetween = timeBetween - (minutes * msPerMinutes);
-        ret[1] = ret[1] + minutes + " mins, "
+        ret[1] = ret[1] + minutes + " mins "
         if (stop == 0) {
             ret[0] = minutes + "m";
             ret[2] = [255, 20, 20, 230];
             stop = 1;
         }
     }
-
-    var secondes = Math.floor(timeBetween / msPerSeconds);
-    if (secondes > 0) {
-        timeBetween = timeBetween - (secondes * msPerSeconds);
-        ret[1] = ret[1] + secondes + " sec"
-        if (stop == 0) {
-            ret[0] = secondes + "s";
-            ret[2] = [255, 20, 20, 230];
+    if (cycleWait==1000) {
+        var secondes = Math.floor(timeBetween / msPerSeconds);
+        if (secondes > 0) {
+            timeBetween = timeBetween - (secondes * msPerSeconds);
+            ret[1] = ret[1] + secondes + " sec"
+            if (stop == 0) {
+                ret[0] = secondes + "s";
+                ret[2] = [255, 20, 20, 230];
+            }
         }
     }
 
