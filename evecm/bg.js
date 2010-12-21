@@ -279,7 +279,7 @@ function recupInfosPerso() {
         if (row[2] == 5) {
             skillName.innerHTML += row[0] + '(' + row[3] + 'x)<br>SP: ' + delim(row[4]);
         } else {
-            skillName.innerHTML += row[0] + '(' + row[3] + 'x)<br>SP: ' + delim(row[4]) + '/' + delim(getMaxSP(row[2], row[3]));
+            skillName.innerHTML += row[0] + '(' + row[3] + 'x)<br><span id="sp'+row[1]+'">SP: ' + delim(row[4]) + '/' + delim(getMaxSP(row[2], row[3]));
         }
         tdSkill.appendChild(skillName);
         lvImg.setAttribute('src', 'img/level' + row[2] + '.gif');
