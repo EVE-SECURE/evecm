@@ -47,7 +47,7 @@ function refreshDateFin() {
         text: compteur[0]
     });
     chrome.browserAction.setTitle({
-        title: drawQueue()
+        title: drawToolTip()
     });
     chrome.browserAction.setBadgeBackgroundColor({
         color: compteur[2]
@@ -55,7 +55,7 @@ function refreshDateFin() {
     setTimeout("refreshDateFin()",cycleWait )
 }
 
-function drawQueue() {
+function drawToolTip() {
     var ret = '';
     for (var i = 0; i < queue.length; i++) {
         ret = ret + queue[i][0] + ' ' + queue[i][1] + ': ' + differenceDates(queue[i][3])[1] + '\n';
@@ -66,6 +66,7 @@ function drawQueue() {
 
 function queueCalc() {
     var skills = skillQueue.responseXML.getElementsByTagName("row");
+    var skillTable = document.createElement('table');
     for (var i = 0; i < skills.length; i++) {
         queue[i] = [];
         queue[i][0] = getLibelleSkill(skills[i].getAttribute('typeID'))[0];
@@ -74,7 +75,29 @@ function queueCalc() {
         queue[i][2].addMinutes(new Date().getTimezoneOffset() * -1);
         queue[i][3] = Date.parse(skills[i].getAttribute('endTime'));
         queue[i][3].addMinutes(new Date().getTimezoneOffset() * -1);
+        var skillTr = document.createElement('tr');
+        skillTr.setAttribute('skillId', skills[i].getAttribute('typeID'));
+        skillTr.setAttribute('start', skills[i].getAttribute('startTime'));
+        skillTr.setAttribute('end', skills[i].getAttribute('endTime'));
+
+        var tdSkillName = document.createElement('td');
+        tdSkillName.innerHTML = queue[i][0];
+        skillTr.appendChild(tdSkillName);
+
+        var tdSkillInfo = document.createElement('td');
+        var skillImage = document.createElement('img');
+        if (i==0) {
+            var imgSrc = 'img/levelup'+skills[i].getAttribute('level')+'.gif';
+        } else {
+            var imgSrc = 'img/levelupf'+skills[i].getAttribute('level')+'.gif';
+        }
+        skillImage.setAttribute('src', imgSrc);
+        tdSkillInfo.appendChild(skillImage);
+        sdkillTr.appendChild(tdSkillInfo);
+
+        skillTable.appendChild(skillTr);
     }
+    document.getElementById('idSkillInTraining').appendChild(skillTable);
     refreshDateFin();
 }
 
