@@ -93,7 +93,7 @@ function queueCalc() {
         }
         skillImage.setAttribute('src', imgSrc);
         tdSkillInfo.appendChild(skillImage);
-        sdkillTr.appendChild(tdSkillInfo);
+        skillTr.appendChild(tdSkillInfo);
 
         skillTable.appendChild(skillTr);
     }
