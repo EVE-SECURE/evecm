@@ -93,7 +93,16 @@ function queueCalc() {
         }
         skillImage.setAttribute('src', imgSrc);
         tdSkillInfo.appendChild(skillImage);
+        tdSkillInfo.appendChild(document.createElement('br'));
+        var progressDiv = document.createElement('div');
+        progressDiv.setAttribute('class', 'progress');
+        var progImg = document.createElement('img');
+        progImg.setAttribute('src', 'img/prog.gif');
+        progImg.setAttribute('width', '31%');
+        progImg.setAttribute('height', '2px');
+        progressDiv.appendChild(progImg);
         skillTr.appendChild(tdSkillInfo);
+        tdSkillInfo.appendChild(progressDiv);
 
         skillTable.appendChild(skillTr);
     }
