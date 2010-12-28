@@ -379,3 +379,7 @@ function delim(st) {
 function getMaxSP(lv, rank) {
     return Math.ceil(Math.pow(2, ((2.5 * (parseInt(lv) + 1)) - 2.5)) * 250 * rank);
 }
+
+function getLearnSpeed(start,end,from,to) {
+    return (Date.parse(end) - Date.parse(start))/(to-from);
+}
