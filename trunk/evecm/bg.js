@@ -58,7 +58,7 @@ function refreshDateFin() {
 function drawToolTip() {
     var ret = '';
     for (var i = 0; i < queue.length; i++) {
-        ret = ret + queue[i][0] + ' ' + queue[i][1] + ': ' + differenceDates(queue[i][3])[1] + '\n';
+        ret = ret + getLibelleSkill(queue[i][0])[0] + ' ' + toRoman(queue[i][1]+' ') + ': ' + differenceDates(queue[i][3])[1] + '\n';
     }
     var ret2 = ret.slice(0, -1);
     return ret2;
@@ -69,27 +69,30 @@ function queueCalc() {
     var skillTable = document.createElement('table');
     for (var i = 0; i < skills.length; i++) {
         queue[i] = [];
-        queue[i][0] = getLibelleSkill(skills[i].getAttribute('typeID'))[0];
-        queue[i][1] = toRoman(skills[i].getAttribute('level') + ' ');
+        queue[i][0] = skills[i].getAttribute('typeID');
+        queue[i][1] = parseInt(skills[i].getAttribute('level'));
         queue[i][2] = Date.parse(skills[i].getAttribute('startTime'));
         queue[i][2].addMinutes(new Date().getTimezoneOffset() * -1);
         queue[i][3] = Date.parse(skills[i].getAttribute('endTime'));
         queue[i][3].addMinutes(new Date().getTimezoneOffset() * -1);
+        queue[i][4] = parseInt(skills[i].getAttribute('startSP'));
+        queue[i][5] = parseInt(skills[i].getAttribute('endSP'));
+        queue[i][6] = parseInt(getLibelleSkill(queue[i][0])[1]);
         var skillTr = document.createElement('tr');
         skillTr.setAttribute('skillId', skills[i].getAttribute('typeID'));
         skillTr.setAttribute('start', skills[i].getAttribute('startTime'));
         skillTr.setAttribute('end', skills[i].getAttribute('endTime'));
 
         var tdSkillName = document.createElement('td');
-        tdSkillName.innerHTML = queue[i][0];
+        tdSkillName.innerHTML = getLibelleSkill(queue[i][0])[0];
         skillTr.appendChild(tdSkillName);
 
         var tdSkillInfo = document.createElement('td');
         var skillImage = document.createElement('img');
         if (i==0) {
-            var imgSrc = 'img/levelup'+skills[i].getAttribute('level')+'.gif';
+            var imgSrc = 'img/levelup'+queue[i][1]+'.gif';
         } else {
-            var imgSrc = 'img/levelupf'+skills[i].getAttribute('level')+'.gif';
+            var imgSrc = 'img/levelupf'+queue[i][1]+'.gif';
         }
         skillImage.setAttribute('src', imgSrc);
         tdSkillInfo.appendChild(skillImage);
@@ -98,7 +101,8 @@ function queueCalc() {
         progressDiv.setAttribute('class', 'progress');
         var progImg = document.createElement('img');
         progImg.setAttribute('src', 'img/prog.gif');
-        progImg.setAttribute('width', '31%');
+        progImg.setAttribute('width', ''+getCurrPrec(queue[i][2],queue[i][3],queue[i][4],queue[i][5],queue[i][1],queue[i][6])+'%');
+        //progImg.setAttribute('width', ''+getCurrSP(queue[i][2],queue[i][3],queue[i][4],queue[i][5]));
         progImg.setAttribute('height', '2px');
         progressDiv.appendChild(progImg);
         skillTr.appendChild(tdSkillInfo);
@@ -384,7 +388,20 @@ function getMaxSP(lv, rank) {
 
 
 
-function getLearnSpeed(start,end,from,to) {
-    return (Date.parse(end) - Date.parse(start))/(to-from);
+function getCurrPrec(start,end,from,to,lv,rank) {
+    var now = new Date();
+    //now.addMinutes(new Date().getTimezoneOffset() * -1);
+    var speed = (to-from)/(end.valueOf() - start.valueOf());
+    if (start.getTime() > now.valueOf()) {
+        var curr = from;
+    } else {
+        var curr =  Math.ceil(speed*(now.valueOf() - start.valueOf()))+from;
+    }
+    //return (getMaxSP(lv))/(curr - getMaxSP((lv-1),rank))*100;
+    var deltaLv = getMaxSP((lv-1),rank) - getMaxSP((lv-2),rank);
+    var currDeltaLv = curr - getMaxSP((lv-2),rank);
+
+    return Math.ceil(currDeltaLv/deltaLv*100);
 }
+
 
