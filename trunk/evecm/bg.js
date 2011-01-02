@@ -58,7 +58,7 @@ function refreshDateFin() {
 function drawToolTip() {
     var ret = '';
     for (var i = 0; i < queue.length; i++) {
-        ret = ret + getLibelleSkill(queue[i][0])[0] + ' ' + toRoman(queue[i][1]+' ') + ': ' + differenceDates(queue[i][3])[1] + '\n';
+        ret = ret + getLibelleSkill(queue[i][0])[0] + ' ' + toRoman(queue[i][1]+' ') + ': ' + differenceDates(queue[i][3],cycleWait)[1] + '\n';
     }
     var ret2 = ret.slice(0, -1);
     return ret2;
@@ -84,7 +84,7 @@ function queueCalc() {
         skillTr.setAttribute('end', skills[i].getAttribute('endTime'));
 
         var tdSkillName = document.createElement('td');
-        tdSkillName.innerHTML = getLibelleSkill(queue[i][0])[0];
+        tdSkillName.innerHTML = getLibelleSkill(queue[i][0])[0]+'('+getLibelleSkill(queue[i][0])[1]+'x)';
         skillTr.appendChild(tdSkillName);
 
         var tdSkillInfo = document.createElement('td');
@@ -102,7 +102,6 @@ function queueCalc() {
         var progImg = document.createElement('img');
         progImg.setAttribute('src', 'img/prog.gif');
         progImg.setAttribute('width', ''+getCurrPrec(queue[i][2],queue[i][3],queue[i][4],queue[i][5],queue[i][1],queue[i][6])+'%');
-        //progImg.setAttribute('width', ''+getCurrSP(queue[i][2],queue[i][3],queue[i][4],queue[i][5]));
         progImg.setAttribute('height', '2px');
         progressDiv.appendChild(progImg);
         skillTr.appendChild(tdSkillInfo);
@@ -146,7 +145,7 @@ function recupSkillInTraining() {
 
 
 
-function differenceDates(d) {
+function differenceDates(d,cw) {
     var dateNow = new Date();
     var stop = 0;
     var ret = [];
@@ -183,7 +182,7 @@ function differenceDates(d) {
             stop = 1;
         }
     }
-    if (cycleWait==1000) {
+    if (cw==1000) {
         var secondes = Math.floor(timeBetween / msPerSeconds);
         if (secondes > 0) {
             timeBetween = timeBetween - (secondes * msPerSeconds);
