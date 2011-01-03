@@ -14,7 +14,7 @@ body {
 tr.info {
      font-size: 11px;
 }
-#idListeSkillsConnus table {
+#idListeSkillsConnus table,#idSkillInTraining table {
     width:98%;
     border-collapse: collapse;
 }
@@ -27,6 +27,7 @@ tr.info {
 #idSkillInTraining table tbody tr td {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
+    border: 1px black solid;
 }
 
 #idListeSkillsConnus table tbody tr th {
@@ -73,15 +74,44 @@ div.progress {
     border: 1px solid #818184;
 
 }
+
+td.queueTime {
+    margin: 1px;
+    width: 90px;
+}
+td.queueInfo {
+    margin: 0;
+    width: 46px;
+}
 </style>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="datejs.js"></script>
+<script type="text/javascript" src="funcs.js"></script>
 <script>
+
+var queueTrList = [];
+
 function init() {
     var res = chrome.extension.getBackgroundPage().document.getElementById('main');
     document.getElementById('i').innerHTML = res.innerHTML;
     $("th.header").live('click', function(){
            $(this).parent().parent().find('tr.skill').toggleClass("nd");
     });
+    var queueDiv = document.getElementById('idSkillInTraining');
+    queueTrList = queueDiv.getElementsByTagName('tr');
+    updateCounters();
+}
+
+function updateCounters() {
+    for (var i=0,row; row = queueTrList[i]; i++) {
+        var start = Date.parse(row.getAttribute('start'));
+        var end = Date.parse(row.getAttribute('end'));
+        start.addMinutes(new Date().getTimezoneOffset() * -1);
+        end.addMinutes(new Date().getTimezoneOffset() * -1);
+        row.getElementsByTagName('td')[2].innerHTML = differenceDates(end,1000)[4];
+        row.getElementsByTagName('img')[1].setAttribute('width', getCurrPrec(start,end,parseInt(row.getAttribute('from')),parseInt(row.getAttribute('to')),parseInt(row.getAttribute('level')),parseInt(row.getAttribute('rank')))+'%');
+    }
+    setTimeout("updateCounters()",1000);
 }
 </script>
 </head>
