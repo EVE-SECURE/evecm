@@ -3,10 +3,7 @@ var digit_del = ",";
 var tabcouleurfind = new Array();
 var apiserver = "http://api.eve-online.com";
 
-var msPerDay = 24 * 60 * 60 * 1000;
-var msPerHour = 60 * 60 * 1000;
-var msPerMinutes = 60 * 1000;
-var msPerSeconds = 1000;
+
 var dateFin;
 var currSkill;
 var queue = [];
@@ -82,12 +79,16 @@ function queueCalc() {
         skillTr.setAttribute('skillId', skills[i].getAttribute('typeID'));
         skillTr.setAttribute('start', skills[i].getAttribute('startTime'));
         skillTr.setAttribute('end', skills[i].getAttribute('endTime'));
-
+        skillTr.setAttribute('level', queue[i][1]);
+        skillTr.setAttribute('rank', queue[i][6]);
+        skillTr.setAttribute('from', queue[i][4]);
+        skillTr.setAttribute('to', queue[i][5]);
         var tdSkillName = document.createElement('td');
         tdSkillName.innerHTML = getLibelleSkill(queue[i][0])[0]+'('+getLibelleSkill(queue[i][0])[1]+'x)';
         skillTr.appendChild(tdSkillName);
 
         var tdSkillInfo = document.createElement('td');
+        tdSkillInfo.setAttribute('class', 'queueInfo');
         var skillImage = document.createElement('img');
         if (i==0) {
             var imgSrc = 'img/levelup'+queue[i][1]+'.gif';
@@ -101,16 +102,20 @@ function queueCalc() {
         progressDiv.setAttribute('class', 'progress');
         var progImg = document.createElement('img');
         progImg.setAttribute('src', 'img/prog.gif');
-        progImg.setAttribute('width', ''+getCurrPrec(queue[i][2],queue[i][3],queue[i][4],queue[i][5],queue[i][1],queue[i][6])+'%');
+        progImg.setAttribute('width', '1%');
         progImg.setAttribute('height', '2px');
         progressDiv.appendChild(progImg);
-        skillTr.appendChild(tdSkillInfo);
         tdSkillInfo.appendChild(progressDiv);
+        var timeTd = document.createElement('td');
+        timeTd.setAttribute('class', 'queueTime')
+        skillTr.appendChild(tdSkillInfo);
+        skillTr.appendChild(timeTd);
 
         skillTable.appendChild(skillTr);
     }
     document.getElementById('idSkillInTraining').appendChild(skillTable);
     refreshDateFin();
+
 }
 
 function recupSkillInTraining() {
@@ -145,57 +150,7 @@ function recupSkillInTraining() {
 
 
 
-function differenceDates(d,cw) {
-    var dateNow = new Date();
-    var stop = 0;
-    var ret = [];
-    ret[1] = "";
-    var timeBetween = d.valueOf() - dateNow.valueOf();
-    ret[3] = timeBetween;
-    var jours = Math.floor(timeBetween / msPerDay);
-    if (jours > 0) {
-        timeBetween = timeBetween - (jours * msPerDay);
-        ret[0] = jours + "d";
-        ret[1] = jours + " days,  ";
-        ret[2] = [30, 60, 150, 230];
-        stop = 1;
-    }
 
-    var heures = Math.floor(timeBetween / msPerHour);
-    if (heures > 0) {
-        timeBetween = timeBetween - (heures * msPerHour);
-        ret[1] = ret[1] + heures + " hours,  ";
-        if (stop == 0) {
-            ret[0] = heures + "h";
-            ret[2] = [255, 20, 20, 230];
-            stop = 1;
-        }
-    }
-
-    var minutes = Math.floor(timeBetween / msPerMinutes);
-    if (minutes > 0) {
-        timeBetween = timeBetween - (minutes * msPerMinutes);
-        ret[1] = ret[1] + minutes + " mins "
-        if (stop == 0) {
-            ret[0] = minutes + "m";
-            ret[2] = [255, 20, 20, 230];
-            stop = 1;
-        }
-    }
-    if (cw==1000) {
-        var secondes = Math.floor(timeBetween / msPerSeconds);
-        if (secondes > 0) {
-            timeBetween = timeBetween - (secondes * msPerSeconds);
-            ret[1] = ret[1] + secondes + " sec"
-            if (stop == 0) {
-                ret[0] = secondes + "s";
-                ret[2] = [255, 20, 20, 230];
-            }
-        }
-    }
-
-    return ret;
-}
 
 function getLibelleSkill(idSkill) {
     var skillTreeDoc = skillTreeRequest.responseXML;
@@ -379,28 +334,6 @@ function delim(st) {
     return trSt.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1' + digit_del);
 }
 
-function getMaxSP(lv, rank) {
-    return Math.ceil(Math.pow(2, ((2.5 * (parseInt(lv) + 1)) - 2.5)) * 250 * rank);
 
-}
-
-
-
-
-function getCurrPrec(start,end,from,to,lv,rank) {
-    var now = new Date();
-    //now.addMinutes(new Date().getTimezoneOffset() * -1);
-    var speed = (to-from)/(end.valueOf() - start.valueOf());
-    if (start.getTime() > now.valueOf()) {
-        var curr = from;
-    } else {
-        var curr =  Math.ceil(speed*(now.valueOf() - start.valueOf()))+from;
-    }
-    //return (getMaxSP(lv))/(curr - getMaxSP((lv-1),rank))*100;
-    var deltaLv = getMaxSP((lv-1),rank) - getMaxSP((lv-2),rank);
-    var currDeltaLv = curr - getMaxSP((lv-2),rank);
-
-    return Math.ceil(currDeltaLv/deltaLv*100);
-}
 
 
