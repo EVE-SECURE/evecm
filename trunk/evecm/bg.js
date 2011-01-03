@@ -266,18 +266,29 @@ function recupInfosPerso() {
         tdLevel.className = 'skillLv';
         trSkill.setAttribute("idSkill", row[1]);
         trSkill.setAttribute("spCount", row[4]);
+        var progressDiv = document.createElement('div');
+        progressDiv.setAttribute('class', 'progress');
+        var progImg = document.createElement('img');
+        progImg.setAttribute('src', 'img/prog.gif');
         if (row[2] == 5) {
             skillName.innerHTML += row[0] + '(' + row[3] + 'x)<br>SP: ' + delim(row[4]);
+            progImg.setAttribute('width', '100%');
         } else {
-            skillName.innerHTML += row[0] + '(' + row[3] + 'x)<br><span id="sp'+row[1]+'">SP: ' + delim(row[4]) + '/' + delim(getMaxSP(row[2], row[3]));
+            skillName.innerHTML += row[0] + '(' + row[3] + 'x)<br><span id="sp'+row[1]+'">SP: ' + delim(row[4]) + '/' + delim(getMaxSP(parseInt(row[2])+1, row[3]));
+            progImg.setAttribute('width', getCurrPrec(0,0,row[4],getMaxSP(parseInt(row[2])+1,row[3]),parseInt(row[2])+1,row[3])[0]+'%');
         }
         tdSkill.appendChild(skillName);
         lvImg.setAttribute('src', 'img/level' + row[2] + '.gif');
+        lvImg.setAttribute('id','img'+row[1]);
         trSkill.appendChild(tdSkill);
         trSkill.appendChild(tdLevel);
         tdLevel.appendChild(lvImg);
+        tdLevel.appendChild(document.createElement('br'));
+        progImg.setAttribute('height', '2px');
+        progImg.setAttribute('id', 'prog'+row[1]);
+        progressDiv.appendChild(progImg);
+        tdLevel.appendChild(progressDiv);
         placeSkillInTableGroup(trSkill, listGroup);
-        
     }
     for (var i = 0, row; row = listGroup[i]; i++) {
         var sp = row.getAttribute('spCount');
@@ -329,10 +340,6 @@ function getGroupIDBySkillID(idSkill) {
     }
 }
 
-function delim(st) {
-    var trSt = st + '';
-    return trSt.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1' + digit_del);
-}
 
 
 

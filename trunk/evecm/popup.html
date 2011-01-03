@@ -87,33 +87,8 @@ td.queueInfo {
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="datejs.js"></script>
 <script type="text/javascript" src="funcs.js"></script>
-<script>
+<script type="text/javascript" src="popup.js"></script>
 
-var queueTrList = [];
-
-function init() {
-    var res = chrome.extension.getBackgroundPage().document.getElementById('main');
-    document.getElementById('i').innerHTML = res.innerHTML;
-    $("th.header").live('click', function(){
-           $(this).parent().parent().find('tr.skill').toggleClass("nd");
-    });
-    var queueDiv = document.getElementById('idSkillInTraining');
-    queueTrList = queueDiv.getElementsByTagName('tr');
-    updateCounters();
-}
-
-function updateCounters() {
-    for (var i=0,row; row = queueTrList[i]; i++) {
-        var start = Date.parse(row.getAttribute('start'));
-        var end = Date.parse(row.getAttribute('end'));
-        start.addMinutes(new Date().getTimezoneOffset() * -1);
-        end.addMinutes(new Date().getTimezoneOffset() * -1);
-        row.getElementsByTagName('td')[2].innerHTML = differenceDates(end,1000)[4];
-        row.getElementsByTagName('img')[1].setAttribute('width', getCurrPrec(start,end,parseInt(row.getAttribute('from')),parseInt(row.getAttribute('to')),parseInt(row.getAttribute('level')),parseInt(row.getAttribute('rank')))+'%');
-    }
-    setTimeout("updateCounters()",1000);
-}
-</script>
 </head>
 <body onload="init()"><div id="i"></div></body>
 </html>

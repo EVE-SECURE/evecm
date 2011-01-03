@@ -2,6 +2,7 @@ var msPerDay = 24 * 60 * 60 * 1000;
 var msPerHour = 60 * 60 * 1000;
 var msPerMinutes = 60 * 1000;
 var msPerSeconds = 1000;
+var digit_del = ",";
 
 function differenceDates(d,cw) {
     var dateNow = new Date();
@@ -62,7 +63,7 @@ function differenceDates(d,cw) {
 }
 
 function getMaxSP(lv, rank) {
-    return Math.ceil(Math.pow(2, ((2.5 * (parseInt(lv) + 1)) - 2.5)) * 250 * rank);
+    return Math.ceil(Math.pow(2, ((2.5 * parseInt(lv)) - 2.5)) * 250 * rank);
 
 }
 
@@ -70,14 +71,22 @@ function getMaxSP(lv, rank) {
 
 
 function getCurrPrec(start,end,from,to,lv,rank) {
+    var ret = [];
     var now = new Date();
-    var speed = (to-from)/(end.valueOf() - start.valueOf());
-    if (start.getTime() > now.valueOf()) {
+    if ( (start==0 && end==0) || (start.getTime() > now.valueOf()) ) {
         var curr = from;
     } else {
+        var speed = (to-from)/(end.valueOf() - start.valueOf());
         var curr =  Math.ceil(speed*(now.valueOf() - start.valueOf()))+from;
     }
-    var deltaLv = getMaxSP((lv-1),rank) - getMaxSP((lv-2),rank);
-    var currDeltaLv = curr - getMaxSP((lv-2),rank);
-    return Math.ceil(currDeltaLv/deltaLv*100);
+    var deltaLv = getMaxSP((lv),rank) - getMaxSP((lv-1),rank);
+    var currDeltaLv = curr - getMaxSP((lv-1),rank);
+    ret[0] = Math.ceil(currDeltaLv/deltaLv*100);
+    ret[1] = curr;
+    return ret;
+}
+
+function delim(st) {
+    var trSt = st + '';
+    return trSt.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1' + digit_del);
 }
