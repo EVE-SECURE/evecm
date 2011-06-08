@@ -19,7 +19,9 @@ var userid = localStorage["userid"];
 var characterid = localStorage["characterid"];
 var cycleWait = localStorage['seconds'];
 
+
 function init() {
+
     skillTreeRequest.open("GET", "skillTree.xml", false);
     skillTreeRequest.send("");
     reqSkillInTraining.open("GET", apiserver + "/char/SkillInTraining.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
@@ -28,6 +30,7 @@ function init() {
     reqCharacterSheet.open("GET", apiserver + "/char/CharacterSheet.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
     reqCharacterSheet.onload = recupInfosPerso;
     reqCharacterSheet.send(null);
+    setTimeout('window.location.reload()',600000);
 }
 
 function refreshDateFin() {
