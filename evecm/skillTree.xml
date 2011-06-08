@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <eveapi version="2">
-  <currentTime>2011-01-01 23:45:56</currentTime>
+  <currentTime>2011-06-08 20:29:04</currentTime>
   <result>
     <rowset name="skillGroups" key="groupID" columns="groupName,groupID">
       <row groupName="Corporation Management" groupID="266">
@@ -10,8 +10,8 @@
             <rank>3</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -43,9 +43,9 @@
               <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="durationSkillBonus" bonusValue="1" />
               <row bonusType="researchGangSizeBonus" bonusValue="1" />
               <row bonusType="maxAttackTargets" bonusValue="1" />
+              <row bonusType="durationSkillBonus" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Corporation Management" groupID="266" typeID="3363" published="1">
@@ -88,8 +88,8 @@ Note:  the CEO must update his corporation through the corporation user interfac
               <row typeID="3355" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="nonRaceCorporationMembersBonus" bonusValue="20" />
@@ -103,8 +103,8 @@ Note:  the CEO must update his corporation through the corporation user interfac
               <row typeID="3380" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -116,8 +116,8 @@ Note:  the CEO must update his corporation through the corporation user interfac
               <row typeID="3412" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -130,8 +130,8 @@ Notice:  the CEO must update his corporation through the corporation user interf
               <row typeID="3363" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="corporationMemberBonus" bonusValue="50" />
@@ -145,8 +145,8 @@ Notice:  the CEO must update his corporation through the corporation user interf
               <row typeID="3359" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -158,8 +158,8 @@ Notice:  the CEO must update his corporation through the corporation user interf
               <row typeID="3385" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -190,12 +190,12 @@ Can not be trained on Trial Accounts.
               <row typeID="11584" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
               <row bonusType="posStructureControlAmount" bonusValue="0" />
+              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Starbase Management" groupID="266" typeID="3365" published="0">
@@ -206,8 +206,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3392" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -219,8 +219,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3348" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -275,8 +275,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3436" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -293,9 +293,9 @@ Can not be trained on Trial Accounts.
               <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
+              <row bonusType="hullHpBonus" bonusValue="5" />
               <row bonusType="shieldCapacityBonus" bonusValue="5" />
               <row bonusType="armorHpBonus" bonusValue="5" />
-              <row bonusType="hullHpBonus" bonusValue="5" />
             </rowset>
           </row>
           <row typeName="Drone Interfacing" groupID="273" typeID="3442" published="1">
@@ -309,8 +309,8 @@ Can not be trained on Trial Accounts.
               <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="damageMultiplierBonus" bonusValue="20" />
               <row bonusType="miningAmountBonus" bonusValue="20" />
+              <row bonusType="damageMultiplierBonus" bonusValue="20" />
             </rowset>
           </row>
           <row typeName="Drone Navigation" groupID="273" typeID="12305" published="1">
@@ -320,8 +320,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3436" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="droneMaxVelocityBonus" bonusValue="5" />
@@ -334,8 +334,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3436" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rangeSkillBonus" bonusValue="5" />
@@ -346,8 +346,8 @@ Can not be trained on Trial Accounts.
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>perception</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxActiveDroneBonus" bonusValue="1" />
@@ -361,8 +361,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3427" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="droneRangeBonus" bonusValue="3000" />
@@ -390,8 +390,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3348" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="20" />
@@ -448,8 +448,8 @@ Can not be trained on Trial Accounts.
               <row typeID="3386" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="miningAmountBonus" bonusValue="3" />
@@ -549,8 +549,8 @@ Bonus: drone control range increased by 5000 meters per skill level.</descriptio
               <row typeID="3436" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="shieldCapacityMultiplier" bonusValue="500" />
@@ -569,8 +569,8 @@ Bonus: drone control range increased by 5000 meters per skill level.</descriptio
               <row typeID="3432" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="cpuNeedBonus" bonusValue="0" />
@@ -598,8 +598,8 @@ Bonus: drone control range increased by 5000 meters per skill level.</descriptio
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -615,8 +615,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3426" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capNeedBonus" bonusValue="-5" />
@@ -627,8 +627,8 @@ Note: Does not affect capital class modules.</description>
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="cpuOutputBonus2" bonusValue="5" />
@@ -642,8 +642,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3413" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="cpuNeedBonus" bonusValue="-5" />
@@ -657,8 +657,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3427" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="falloffBonus" bonusValue="10" />
@@ -698,8 +698,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3427" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rangeSkillBonus" bonusValue="10" />
@@ -712,8 +712,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3426" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxTargetRangeBonus" bonusValue="5" />
@@ -726,8 +726,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3429" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxTargetBonus" bonusValue="1" />
@@ -755,8 +755,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3435" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="falloffBonus" bonusValue="0" />
@@ -800,8 +800,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3435" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="propulsionSkillPropulsionStrengthBonus" bonusValue="0" />
@@ -859,8 +859,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3433" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="scanSkillEwStrengthBonus" bonusValue="5" />
@@ -873,8 +873,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3426" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="scanResolutionBonus" bonusValue="5" />
@@ -902,8 +902,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3426" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="scanspeedBonus" bonusValue="-5" />
@@ -916,8 +916,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3426" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capNeedBonus" bonusValue="-5" />
@@ -930,8 +930,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3426" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxTargetBonus" bonusValue="1" />
@@ -944,8 +944,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="9955" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxTargetBonus" bonusValue="2" />
@@ -1022,8 +1022,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3423" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capNeedBonus" bonusValue="-5" />
@@ -1053,8 +1053,8 @@ Note: Does not affect capital class modules.</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="shieldBoostCapacitorBonus" bonusValue="-2" />
@@ -1068,8 +1068,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield EM resistance</d
               <row typeID="3416" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="hardeningBonus" bonusValue="5" />
@@ -1084,8 +1084,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield EM resistance</d
               <row typeID="3402" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capNeedBonus" bonusValue="-5" />
@@ -1099,8 +1099,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield EM resistance</d
               <row typeID="3402" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="cpuNeedBonus" bonusValue="-5" />
@@ -1113,8 +1113,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield EM resistance</d
               <row typeID="3413" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capacitorCapacityBonus" bonusValue="5" />
@@ -1128,8 +1128,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield EM resistance</d
               <row typeID="3402" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="durationBonus" bonusValue="-5" />
@@ -1142,8 +1142,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield EM resistance</d
               <row typeID="3413" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capRechargeBonus" bonusValue="-5" />
@@ -1154,8 +1154,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield EM resistance</d
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="powerEngineeringOutputBonus" bonusValue="5" />
@@ -1169,8 +1169,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Explosive resist
               <row typeID="3416" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="resistanceBonus" bonusValue="0" />
@@ -1190,9 +1190,9 @@ To passive shield hardeners: 5% bonus per skill level to Shield Kinetic resistan
               <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="resistanceBonus" bonusValue="0" />
               <row bonusType="hardeningBonus" bonusValue="5" />
               <row bonusType="hardeningbonus2" bonusValue="3" />
+              <row bonusType="resistanceBonus" bonusValue="0" />
             </rowset>
           </row>
           <row typeName="Shield Compensation" groupID="271" typeID="21059" published="1">
@@ -1289,13 +1289,13 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3416" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="resistanceBonus" bonusValue="0" />
-              <row bonusType="hardeningbonus2" bonusValue="3" />
               <row bonusType="hardeningBonus" bonusValue="5" />
+              <row bonusType="hardeningbonus2" bonusValue="3" />
             </rowset>
           </row>
         </rowset>
@@ -1320,8 +1320,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3318" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="powerNeedBonus" bonusValue="-2" />
@@ -1403,8 +1403,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="turretSpeeBonus" bonusValue="-2" />
@@ -1419,8 +1419,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3308" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="2" />
@@ -1435,8 +1435,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3308" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="2" />
@@ -1451,8 +1451,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3309" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="2" />
@@ -1467,8 +1467,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3307" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="2" />
@@ -1482,8 +1482,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3306" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -1512,8 +1512,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3305" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -1623,8 +1623,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3303" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -1653,8 +1653,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3302" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -1669,8 +1669,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3306" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="2" />
@@ -1685,8 +1685,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3304" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="2" />
@@ -1699,8 +1699,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3300" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="trackingSpeedBonus" bonusValue="5" />
@@ -1727,8 +1727,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3300" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rangeSkillBonus" bonusValue="5" />
@@ -1813,8 +1813,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3300" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -1841,8 +1841,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3300" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -1856,8 +1856,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3303" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="2" />
@@ -1927,8 +1927,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3300" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="cpuNeedBonus" bonusValue="-5" />
@@ -1959,8 +1959,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3380" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="amarrTechMutator" bonusValue="-5" />
@@ -1999,8 +1999,8 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
               <row typeID="3380" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="caldariTechMutator" bonusValue="-5" />
@@ -2052,12 +2052,12 @@ To passive shield hardeners: 5% bonus per skill level to Shield Thermal resistan
             <rank>2</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
               <row bonusType="durationSkillBonus" bonusValue="1" />
+              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Gallente Tech" groupID="268" typeID="3383" published="0">
@@ -2094,8 +2094,8 @@ er yield.</description>
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="miningAmountBonus" bonusValue="5" />
@@ -2109,8 +2109,8 @@ er yield.</description>
               <row typeID="3409" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2122,8 +2122,8 @@ er yield.</description>
               <row typeID="3409" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2135,8 +2135,8 @@ er yield.</description>
               <row typeID="3402" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2147,8 +2147,8 @@ er yield.</description>
               <row typeID="3386" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="iceHarvestCycleBonus" bonusValue="-5" />
@@ -2174,8 +2174,8 @@ er yield.</description>
               <row typeID="24625" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="consumptionQuantityBonus" bonusValue="50" />
@@ -2190,8 +2190,8 @@ er yield.</description>
               <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="durationSkillBonus" bonusValue="1" />
               <row bonusType="manufacturingTimeBonus" bonusValue="-4" />
+              <row bonusType="durationSkillBonus" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Jaspet Processing" groupID="268" typeID="12187" published="1">
@@ -2242,8 +2242,8 @@ er yield.</description>
               <row typeID="3409" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2252,8 +2252,8 @@ er yield.</description>
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="miningAmountBonus" bonusValue="5" />
@@ -2266,8 +2266,8 @@ er yield.</description>
               <row typeID="3386" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="miningUpgradeCPUReductionBonus" bonusValue="-5" />
@@ -2332,8 +2332,8 @@ er yield.</description>
               <row typeID="3402" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2357,8 +2357,8 @@ er yield.</description>
               <row typeID="3380" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>memory</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>memory</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="manufactureCostBonus" bonusValue="-4" />
@@ -2451,8 +2451,8 @@ er yield.</description>
               <row typeID="3387" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2482,8 +2482,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3348" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="armorHpBonus" bonusValue="2" />
@@ -2497,8 +2497,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="20494" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2525,8 +2525,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="11569" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2537,8 +2537,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="11574" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2551,8 +2551,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="11572" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2565,8 +2565,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3348" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxTargetRangeBonus" bonusValue="2" />
@@ -2580,8 +2580,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="20495" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>charisma</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>charisma</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2622,8 +2622,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3348" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="miningAmountBonus" bonusValue="2" />
@@ -2638,8 +2638,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3351" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2696,8 +2696,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3349" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2722,8 +2722,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3348" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2785,8 +2785,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3395" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2811,8 +2811,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="27902" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capNeedBonus" bonusValue="-5" />
@@ -2827,8 +2827,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3393" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="durationSkillBonus" bonusValue="-5" />
@@ -2856,8 +2856,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="3395" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -2870,8 +2870,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="26252" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rigDrawbackBonus" bonusValue="-10" />
@@ -2886,8 +2886,8 @@ Note: Fleet bonuses only affect fleet members in space within the same solar sys
               <row typeID="26252" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rigDrawbackBonus" bonusValue="-10" />
@@ -2901,12 +2901,12 @@ To passive armor hardeners: 5% bonus per skill level to Armor EM resistance</des
               <row typeID="3394" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="hardeningBonus" bonusValue="5" />
               <row bonusType="hardeningbonus2" bonusValue="3" />
+              <row bonusType="hardeningBonus" bonusValue="5" />
             </rowset>
           </row>
           <row typeName="Energy Weapon Rigging" groupID="269" typeID="26258" published="1">
@@ -2918,8 +2918,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor EM resistance</des
               <row typeID="26252" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rigDrawbackBonus" bonusValue="-10" />
@@ -2933,8 +2933,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Explosive resistan
               <row typeID="3394" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="hardeningBonus" bonusValue="5" />
@@ -3004,8 +3004,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Explosive resistan
               <row typeID="3392" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -3017,12 +3017,12 @@ To passive armor hardeners: 5% bonus per skill level to Armor Kinetic resistance
               <row typeID="3394" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="hardeningBonus" bonusValue="5" />
               <row bonusType="hardeningbonus2" bonusValue="3" />
+              <row bonusType="hardeningBonus" bonusValue="5" />
             </rowset>
           </row>
           <row typeName="Launcher Rigging" groupID="269" typeID="26260" published="1">
@@ -3088,8 +3088,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Kinetic resistance
               <row typeID="3392" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="shipBrokenRepairCostMultiplierBonus" bonusValue="-5" />
@@ -3104,8 +3104,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Kinetic resistance
               <row typeID="11584" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -3118,8 +3118,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Kinetic resistance
               <row typeID="26252" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rigDrawbackBonus" bonusValue="-10" />
@@ -3133,8 +3133,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Kinetic resistance
               <row typeID="3393" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capNeedBonus" bonusValue="-5" />
@@ -3147,8 +3147,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Kinetic resistance
               <row typeID="3392" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="capNeedBonus" bonusValue="-5" />
@@ -3161,8 +3161,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Kinetic resistance
               <row typeID="3392" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="durationSkillBonus" bonusValue="-5" />
@@ -3237,12 +3237,12 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3394" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="hardeningBonus" bonusValue="5" />
               <row bonusType="hardeningbonus2" bonusValue="3" />
+              <row bonusType="hardeningBonus" bonusValue="5" />
             </rowset>
           </row>
           <row typeName="Titan Construction" groupID="269" typeID="3399" published="0">
@@ -3254,8 +3254,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3363" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -3270,8 +3270,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="12441" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rofBonus" bonusValue="-5" />
@@ -3285,8 +3285,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3326" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -3300,8 +3300,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3325" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -3315,8 +3315,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3326" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rofBonus" bonusValue="-2" />
@@ -3344,8 +3344,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3319" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="missileVelocityBonus" bonusValue="5" />
@@ -3402,8 +3402,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3321" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -3417,8 +3417,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3324" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rofBonus" bonusValue="-2" />
@@ -3432,8 +3432,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3321" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -3472,8 +3472,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rofBonus" bonusValue="-2" />
@@ -3515,8 +3515,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3320" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rofBonus" bonusValue="-2" />
@@ -3529,8 +3529,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3319" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -3558,8 +3558,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3319" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="damageMultiplierBonus" bonusValue="5" />
@@ -3587,8 +3587,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3325" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="rofBonus" bonusValue="-2" />
@@ -3706,8 +3706,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3456" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="jumpDriveRangeBonus" bonusValue="25" />
@@ -3736,8 +3736,8 @@ To passive armor hardeners: 5% bonus per skill level to Armor Thermal resistance
               <row typeID="3456" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="consumptionQuantityBonusPercentage" bonusValue="-10" />
@@ -3800,32 +3800,32 @@ Note: this skill cannot be trained on trial accounts.</description>
               <row typeID="2406" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Command Center Upgrades" groupID="1044" typeID="2505" published="1">
-            <description>Each rank in this skill improves the quality of command facility available to you, in turn allowing for a greater number of connected facilities on that planet. Cannot be trained on Trial Accounts.</description>
+            <description>Each level in this skill improves the quality of command facility available to you, in turn allowing for a greater number of connected facilities on that planet. Cannot be trained on Trial Accounts.</description>
             <rank>4</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <primaryAttribute>charisma</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>charisma</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Interplanetary Consolidation" groupID="1044" typeID="2495" published="1">
-            <description>For each rank in this skill, you may install a command center on one additional planet, to a maximum of 6 planets. You can have only one command center per planet. Cannot be trained on Trial Accounts.</description>
+            <description>For each level in this skill, you may install a command center on one additional planet, to a maximum of 6 planets. You can have only one command center per planet. Cannot be trained on Trial Accounts.</description>
             <rank>4</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -3852,7 +3852,7 @@ Note: this skill cannot be trained on trial accounts.</description>
             </rowset>
           </row>
           <row typeName="Remote Sensing" groupID="1044" typeID="13279" published="1">
-            <description>The ability to gather and analyze remote sensing data from satellites in orbit around a planet and to produce proper calibrated surveys.
+            <description>The ability to gather and analyze remote sensing data from satellites in orbit around a planet and produce properly calibrated surveys.
 
 Level 1: allows scans within 1 ly
 Level 2: allows scans within 3 ly
@@ -3865,8 +3865,8 @@ Level 5: allows scans within 9 ly
               <row typeID="3402" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -3881,8 +3881,8 @@ Level 5: allows scans within 9 ly
               <row typeID="3406" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="laboratorySlotsBonus" bonusValue="1" />
@@ -3899,8 +3899,8 @@ Level 5: allows scans within 9 ly
               <row typeID="21718" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -3935,8 +3935,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3551" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -3976,8 +3976,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3412" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxScanDeviationModifier" bonusValue="-10" />
@@ -4017,8 +4017,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3392" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4031,8 +4031,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3402" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="durationBonus" bonusValue="20" />
@@ -4067,8 +4067,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3392" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4084,8 +4084,8 @@ Special: Increases a Clone Vat Bay's maximum clone capacity by 15% per skill lev
               <row typeID="20533" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxJumpClonesBonus" bonusValue="15" />
@@ -4151,8 +4151,8 @@ Special: Increases a Clone Vat Bay's maximum clone capacity by 15% per skill lev
               <row typeID="3402" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="prototypingBonus" bonusValue="3" />
@@ -4174,8 +4174,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4197,8 +4197,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4225,8 +4225,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="11433" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -4262,8 +4262,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3392" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4311,8 +4311,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3411" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -4397,8 +4397,8 @@ Note: Clones can only be installed in stations with medical facilities or in shi
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="maxJumpClones" bonusValue="0" />
@@ -4429,12 +4429,12 @@ Note: cannot be trained on trial accounts.</description>
               <row typeID="3402" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
               <row bonusType="laboratorySlotsBonus" bonusValue="1" />
+              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Laser Physics" groupID="270" typeID="11447" published="1">
@@ -4476,8 +4476,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3392" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4490,8 +4490,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3402" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="mineralNeedResearchBonus" bonusValue="-5" />
@@ -4508,8 +4508,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="21718" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -4545,8 +4545,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3402" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -4567,8 +4567,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3392" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4582,8 +4582,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3405" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="boosterAttributeModifier" bonusValue="-5" />
@@ -4605,8 +4605,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4619,8 +4619,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="25538" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="boosterChanceBonus" bonusValue="-5" />
@@ -4642,8 +4642,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4679,8 +4679,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4715,8 +4715,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4729,8 +4729,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3402" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="blueprintmanufactureTimeBonus" bonusValue="-5" />
@@ -4784,8 +4784,8 @@ Can not be trained on Trial Accounts</description>
               <row typeID="3392" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -4826,8 +4826,8 @@ Allows the rudimentary use of Sleeper components in the creation of advanced tec
               <row typeID="13278" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -4858,8 +4858,8 @@ Allows the rudimentary use of Talocan components in the creation of advanced tec
               <row typeID="13278" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -4872,8 +4872,8 @@ Allows the rudimentary use of Talocan components in the creation of advanced tec
               <row typeID="3402" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="thermodynamicsHeatDamage" bonusValue="-5" />
@@ -4890,8 +4890,8 @@ Allows the rudimentary use of Yan Jung components in the creation of advanced te
               <row typeID="13278" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -4906,35 +4906,12 @@ Allows the rudimentary use of Yan Jung components in the creation of advanced te
               <row typeID="3362" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="bountySkillMultiplyer" bonusValue="5" />
             </rowset>
-          </row>
-          <row typeName="Bureaucratic Connections" groupID="278" typeID="16546" published="1">
-            <description>Understanding of corporate bureaucracies.
-
-Improves loyalty point gain by 5% per level when working for agents in the following corporation divisions:
-
-Administration	
-Internal Security
-Personnel
-Storage
-Archives	
-Financial
-</description>
-            <rank>1</rank>
-            <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
-              <row typeID="3363" skillLevel="3" />
-              <row typeID="3355" skillLevel="3" />
-            </rowset>
-            <requiredAttributes>
-              <primaryAttribute>charisma</primaryAttribute>
-              <secondaryAttribute>intelligence</secondaryAttribute>
-            </requiredAttributes>
-            <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
           <row typeName="Connections" groupID="278" typeID="3359" published="1">
             <description>Skill at interacting with friendly NPCs. 4% Modifier to effective standing from friendly NPC Corporations and Factions per level. Not cumulative with Diplomacy or Criminal Connections.</description>
@@ -4967,7 +4944,7 @@ Financial
           <row typeName="DED Connections" groupID="278" typeID="3362" published="1">
             <description>Skill at dealing with Concord Department and negotiating bounties 
 
-Bonus fee of 1.500 isk per pirate head per level of the skill</description>
+Bonus fee of 1,500 isk per pirate head per level of the skill</description>
             <rank>1</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
               <row typeID="3355" skillLevel="5" />
@@ -4994,6 +4971,22 @@ Bonus fee of 1.500 isk per pirate head per level of the skill</description>
               <row bonusType="diplomacyMutator" bonusValue="0.4" />
             </rowset>
           </row>
+          <row typeName="Distribution Connections" groupID="278" typeID="3894" published="1">
+            <description>Understanding of the way trade is conducted at the corporate level.
+
+Improves loyalty point gain by 10% per level when working for agents in the Distribution corporation division.
+</description>
+            <rank>2</rank>
+            <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
+              <row typeID="3443" skillLevel="3" />
+              <row typeID="3355" skillLevel="3" />
+            </rowset>
+            <requiredAttributes>
+              <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>charisma</primaryAttribute>
+            </requiredAttributes>
+            <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
+          </row>
           <row typeName="Fast Talk" groupID="278" typeID="3358" published="1">
             <description>Skill at interacting with Concord. 5% Bonus to effective security rating increase.</description>
             <rank>4</rank>
@@ -5001,79 +4994,12 @@ Bonus fee of 1.500 isk per pirate head per level of the skill</description>
               <row typeID="3355" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>charisma</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>charisma</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="fastTalkMutator" bonusValue="5" />
             </rowset>
-          </row>
-          <row typeName="Financial Connections" groupID="278" typeID="16547" published="1">
-            <description>Understanding of Corporate Finances.
-
-Improves loyalty point gain by 5% per level when working for agents in the following corporation divisions:
-
-Public Relations	
-Marketing	
-Legal	
-Accounting	
-Financial	
-Distribution
-</description>
-            <rank>1</rank>
-            <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
-              <row typeID="3356" skillLevel="3" />
-              <row typeID="3355" skillLevel="3" />
-            </rowset>
-            <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
-              <primaryAttribute>charisma</primaryAttribute>
-            </requiredAttributes>
-            <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
-          </row>
-          <row typeName="High Tech Connections" groupID="278" typeID="16552" published="1">
-            <description>Understanding of high-tech corporate culture.
-
-Improves loyalty point gain by 5% per level when working for agents in the following corporation divisions:
- 
-Archives
-Advisory
-Intelligence
-Manufacturing
-Surveillance
-</description>
-            <rank>1</rank>
-            <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
-              <row typeID="3402" skillLevel="3" />
-              <row typeID="3355" skillLevel="3" />
-            </rowset>
-            <requiredAttributes>
-              <primaryAttribute>charisma</primaryAttribute>
-              <secondaryAttribute>intelligence</secondaryAttribute>
-            </requiredAttributes>
-            <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
-          </row>
-          <row typeName="Labor Connections" groupID="278" typeID="16550" published="1">
-            <description>Understanding of corporate culture on the industrial level and the plight of the worker.
-
-Improves loyalty point gain by 5% per level when working for agents in the following corporation divisions:   
-
-Manufacturing
-Production
-Personnel
-Mining
-Astrosurveying
-</description>
-            <rank>1</rank>
-            <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
-              <row typeID="3380" skillLevel="3" />
-              <row typeID="3355" skillLevel="3" />
-            </rowset>
-            <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
-              <primaryAttribute>charisma</primaryAttribute>
-            </requiredAttributes>
-            <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
           <row typeName="Media" groupID="278" typeID="3360" published="0">
             <description />
@@ -5082,27 +5008,20 @@ Astrosurveying
               <row typeID="3355" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
-          <row typeName="Military Connections" groupID="278" typeID="16549" published="1">
-            <description>Understanding of military culture.
+          <row typeName="Mining Connections" groupID="278" typeID="3893" published="1">
+            <description>Understanding of corporate culture on the industrial level and the plight of the worker.
 
-Improves loyalty point gain by 5% per level when working for agents in the following corporation divisions:
-
-Intelligence
-Security	
-Astrosurveying	
-Command	
-Internal Security	
-Surveillance
+Improves loyalty point gain by 10% per level when working for agents in the Mining corporation division.
 </description>
-            <rank>1</rank>
+            <rank>2</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
+              <row typeID="3380" skillLevel="3" />
               <row typeID="3355" skillLevel="3" />
-              <row typeID="3348" skillLevel="3" />
             </rowset>
             <requiredAttributes>
               <secondaryAttribute>intelligence</secondaryAttribute>
@@ -5117,29 +5036,21 @@ Surveillance
               <row typeID="3355" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>charisma</primaryAttribute>
               <secondaryAttribute>intelligence</secondaryAttribute>
+              <primaryAttribute>charisma</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="negotiationBonus" bonusValue="5" />
             </rowset>
           </row>
-          <row typeName="Political Connections" groupID="278" typeID="16548" published="1">
-            <description>Understanding of political concepts and stratagems.
+          <row typeName="Security Connections" groupID="278" typeID="3895" published="1">
+            <description>Understanding of military culture.
 
-Improves loyalty point gain by 5% per level when working for agents in the following corporation divisions: 
-
-Security
-Legal
-Administration
-Advisory
-Command	
-Public Relations
-</description>
-            <rank>1</rank>
+Improves loyalty point gain by 10% per level when working for agents in the Security corporation division.</description>
+            <rank>2</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
               <row typeID="3355" skillLevel="3" />
-              <row typeID="3357" skillLevel="3" />
+              <row typeID="3348" skillLevel="3" />
             </rowset>
             <requiredAttributes>
               <secondaryAttribute>intelligence</secondaryAttribute>
@@ -5160,29 +5071,6 @@ Public Relations
               <row bonusType="socialBonus" bonusValue="10" />
             </rowset>
           </row>
-          <row typeName="Trade Connections" groupID="278" typeID="16551" published="1">
-            <description>Understanding of the way trade is conducted at the corporate level.
-
-Improves loyalty point gain by 5% per level when working for agents in the following corporation divisions:     
-
-Distribution
-Storage
-Production
-Accounting
-Mining
-Marketing
-</description>
-            <rank>1</rank>
-            <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel">
-              <row typeID="3443" skillLevel="3" />
-              <row typeID="3355" skillLevel="3" />
-            </rowset>
-            <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
-              <primaryAttribute>charisma</primaryAttribute>
-            </requiredAttributes>
-            <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
-          </row>
         </rowset>
       </row>
       <row groupName="Spaceship Command" groupID="257">
@@ -5198,8 +5086,8 @@ Marketing
               <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
               <row bonusType="agilityBonus" bonusValue="-5" />
+              <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Amarr Battleship" groupID="257" typeID="3339" published="1">
@@ -5271,8 +5159,8 @@ Marketing
               <row typeID="3343" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5285,8 +5173,8 @@ Marketing
               <row typeID="3327" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -5318,12 +5206,12 @@ Marketing
               <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="requiredSkill6Level" bonusValue="1" />
+              <row bonusType="requiredSkill4" bonusValue="30539" />
               <row bonusType="requiredSkill4Level" bonusValue="1" />
               <row bonusType="requiredSkill5" bonusValue="30537" />
-              <row bonusType="requiredSkill5Level" bonusValue="1" />
               <row bonusType="requiredSkill6" bonusValue="30538" />
-              <row bonusType="requiredSkill4" bonusValue="30539" />
+              <row bonusType="requiredSkill6Level" bonusValue="1" />
+              <row bonusType="requiredSkill5Level" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Amarr Titan" groupID="257" typeID="3347" published="1">
@@ -5411,8 +5299,8 @@ Marketing
               <row typeID="3334" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5442,8 +5330,8 @@ Marketing
               <row typeID="3330" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -5470,8 +5358,8 @@ Marketing
               <row typeID="3342" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5497,8 +5385,8 @@ Marketing
               <row typeID="3330" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5518,12 +5406,12 @@ Marketing
               <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
+              <row bonusType="requiredSkill5" bonusValue="30549" />
               <row bonusType="requiredSkill4" bonusValue="30548" />
               <row bonusType="requiredSkill6" bonusValue="30552" />
-              <row bonusType="requiredSkill6Level" bonusValue="1" />
-              <row bonusType="requiredSkill5" bonusValue="30549" />
-              <row bonusType="requiredSkill4Level" bonusValue="1" />
               <row bonusType="requiredSkill5Level" bonusValue="1" />
+              <row bonusType="requiredSkill6Level" bonusValue="1" />
+              <row bonusType="requiredSkill4Level" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Caldari Titan" groupID="257" typeID="3346" published="1">
@@ -5535,8 +5423,8 @@ Marketing
               <row typeID="3348" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5567,8 +5455,8 @@ Cannot be trained on trial accounts.</description>
               <row typeID="20342" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5629,8 +5517,8 @@ Cannot be trained on trial accounts.</description>
               <row typeID="3432" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5643,8 +5531,8 @@ Cannot be trained on trial accounts.</description>
               <row typeID="3327" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -5674,8 +5562,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3410" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5704,8 +5592,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3332" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5735,8 +5623,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3328" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -5763,8 +5651,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3340" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5790,8 +5678,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3328" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5810,12 +5698,12 @@ Can not be trained on Trial Accounts.</description>
               <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
+              <row bonusType="requiredSkill4" bonusValue="30546" />
+              <row bonusType="requiredSkill5" bonusValue="30550" />
               <row bonusType="requiredSkill5Level" bonusValue="1" />
               <row bonusType="requiredSkill4Level" bonusValue="1" />
-              <row bonusType="requiredSkill5" bonusValue="30550" />
-              <row bonusType="requiredSkill6Level" bonusValue="1" />
               <row bonusType="requiredSkill6" bonusValue="30553" />
-              <row bonusType="requiredSkill4" bonusValue="30546" />
+              <row bonusType="requiredSkill6Level" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Gallente Titan" groupID="257" typeID="3344" published="1">
@@ -5827,8 +5715,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3348" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5843,8 +5731,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3327" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -5875,8 +5763,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="22552" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6011,8 +5899,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3327" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6026,8 +5914,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3380" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6041,8 +5929,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3333" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6072,8 +5960,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3329" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6100,8 +5988,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3341" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6127,8 +6015,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3329" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6147,12 +6035,12 @@ Can not be trained on Trial Accounts.</description>
               <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="requiredSkill4" bonusValue="30547" />
-              <row bonusType="requiredSkill4Level" bonusValue="1" />
-              <row bonusType="requiredSkill6Level" bonusValue="1" />
-              <row bonusType="requiredSkill6" bonusValue="30554" />
               <row bonusType="requiredSkill5" bonusValue="30551" />
               <row bonusType="requiredSkill5Level" bonusValue="1" />
+              <row bonusType="requiredSkill4" bonusValue="30547" />
+              <row bonusType="requiredSkill4Level" bonusValue="1" />
+              <row bonusType="requiredSkill6" bonusValue="30554" />
+              <row bonusType="requiredSkill6Level" bonusValue="1" />
             </rowset>
           </row>
           <row typeName="Minmatar Titan" groupID="257" typeID="3345" published="1">
@@ -6164,8 +6052,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3348" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6179,8 +6067,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="9955" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6193,8 +6081,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3327" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6240,8 +6128,8 @@ Can not be trained on Trial Accounts.</description>
               <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
-              <row bonusType="agilityBonus" bonusValue="-2" />
               <row bonusType="maxAttackTargets" bonusValue="1" />
+              <row bonusType="agilityBonus" bonusValue="-2" />
             </rowset>
           </row>
           <row typeName="Transport Ships" groupID="257" typeID="19719" published="1">
@@ -6252,8 +6140,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3380" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>perception</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>perception</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6271,8 +6159,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3416" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6283,8 +6171,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6295,8 +6183,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6308,8 +6196,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3436" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6320,8 +6208,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3449" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6333,8 +6221,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3392" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6345,8 +6233,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6357,8 +6245,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6370,8 +6258,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3300" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6382,8 +6270,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3449" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6395,8 +6283,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3416" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6407,8 +6295,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6419,8 +6307,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6432,8 +6320,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3436" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6444,8 +6332,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3449" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6457,8 +6345,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3416" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6469,8 +6357,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3426" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>intelligence</primaryAttribute>
               <secondaryAttribute>memory</secondaryAttribute>
+              <primaryAttribute>intelligence</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6481,8 +6369,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3413" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>intelligence</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6494,8 +6382,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3319" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>perception</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>perception</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6506,8 +6394,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3449" skillLevel="5" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>perception</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6523,8 +6411,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3443" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6537,8 +6425,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3444" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>willpower</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>willpower</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="contrabandDetectionChanceBonus" bonusValue="-0.1" />
@@ -6551,8 +6439,8 @@ Can not be trained on Trial Accounts.</description>
               <row typeID="3443" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6579,8 +6467,8 @@ Note: Cannot be trained on trial accounts</description>
               <row typeID="3355" skillLevel="1" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>willpower</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>willpower</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="canNotBeTrainedOnTrial" bonusValue="1" />
@@ -6613,8 +6501,8 @@ Corporations have a hard limit of 500 outstanding public contracts.</description
               <row typeID="3443" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6625,8 +6513,8 @@ Corporations have a hard limit of 500 outstanding public contracts.</description
               <row typeID="3443" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>willpower</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>willpower</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6636,8 +6524,8 @@ Corporations have a hard limit of 500 outstanding public contracts.</description
             <rank>3</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <secondaryAttribute>intelligence</secondaryAttribute>
               <primaryAttribute>memory</primaryAttribute>
+              <secondaryAttribute>intelligence</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="cargoCapacityBonus" bonusValue="0" />
@@ -6662,8 +6550,8 @@ Corporations have a hard limit of 500 outstanding public contracts.</description
               <row typeID="16622" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6713,8 +6601,8 @@ Note: placing buy orders and directly buying an item are not the same thing.  Di
               <row typeID="16598" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6737,8 +6625,8 @@ Note: placing buy orders and directly buying an item are not the same thing.  Di
               <row typeID="3443" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6749,8 +6637,8 @@ Note: placing buy orders and directly buying an item are not the same thing.  Di
               <row typeID="3445" skillLevel="3" />
             </rowset>
             <requiredAttributes>
-              <primaryAttribute>willpower</primaryAttribute>
               <secondaryAttribute>charisma</secondaryAttribute>
+              <primaryAttribute>willpower</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue">
               <row bonusType="smugglingChanceBonus" bonusValue="0.1" />
@@ -6763,8 +6651,8 @@ Note: placing buy orders and directly buying an item are not the same thing.  Di
               <row typeID="3443" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6779,8 +6667,8 @@ Note: This skill does not apply to taxes imposed by player corporations.</descri
               <row typeID="3443" skillLevel="2" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>charisma</secondaryAttribute>
               <primaryAttribute>willpower</primaryAttribute>
+              <secondaryAttribute>charisma</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6789,8 +6677,8 @@ Note: This skill does not apply to taxes imposed by player corporations.</descri
             <rank>0</rank>
             <rowset name="requiredSkills" key="typeID" columns="typeID,skillLevel" />
             <requiredAttributes>
-              <primaryAttribute>charisma</primaryAttribute>
               <secondaryAttribute>willpower</secondaryAttribute>
+              <primaryAttribute>charisma</primaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6828,8 +6716,8 @@ Note: This skill does not apply to taxes imposed by player corporations.</descri
               <row typeID="16598" skillLevel="4" />
             </rowset>
             <requiredAttributes>
-              <secondaryAttribute>memory</secondaryAttribute>
               <primaryAttribute>charisma</primaryAttribute>
+              <secondaryAttribute>memory</secondaryAttribute>
             </requiredAttributes>
             <rowset name="skillBonusCollection" key="bonusType" columns="bonusType,bonusValue" />
           </row>
@@ -6864,5 +6752,5 @@ Note: Only remotely placed buy orders (using Procurement) require this skill to 
       </row>
     </rowset>
   </result>
-  <cachedUntil>2020-12-13 14:01:17</cachedUntil>
+  <cachedUntil>2021-05-21 11:28:03</cachedUntil>
 </eveapi>
