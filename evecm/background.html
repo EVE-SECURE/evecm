@@ -7,15 +7,25 @@
         <title>bg</title>
     </head>
     <body onload="init()">
-        <div id="main">
-        <table width="100%">
-        <tr class="info"><td rowspan="4"><span id="portrait"/></td><td>Character: <span id="idName" /></td></tr>
-        <tr class="info"><td>Balance: <span id="idBalance" /></td></tr>
-        <tr class="info"><td>Corporation: <span id="idCorp" /></td></tr>
-        <tr class="info"><td>Alliance: <span id="idAlly" /></td></tr>
-        <tr><td colspan="2"><div id="idSkillInTraining" /></td></tr>
-        <tr><td colspan="2"><div id="idListeSkillsConnus" /></td></tr>
-    </table>
+<div id="main">
+        <ul class="tabs">
+            <li><a href="#tab1">Main</a></li>
+            <li><a href="#tab2">Skills</a></li>
+        </ul>
+        <div class="tab_container">
+            <div id="tab1" class="tab_content">
+            <table width="100%">
+            <tr class="info"><td rowspan="4"><span id="portrait"/></td><td>Character: <span id="idName" /></td></tr>
+            <tr class="info"><td>Balance: <span id="idBalance" /></td></tr>
+            <tr class="info"><td>Corporation: <span id="idCorp" /></td></tr>
+            <tr class="info"><td>Alliance: <span id="idAlly" /></td></tr>
+            <tr><td colspan="2"><div id="idSkillInTraining" /></td></tr>
+            </table>
+            </div>
+            <div id="tab2" class="tab_content">
+                <div id="idListeSkillsConnus" />
+            </div>
+        </div>
 </div>
     </body>
 </html>
