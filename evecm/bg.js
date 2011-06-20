@@ -14,6 +14,7 @@ var reqCharacterSheet = new XMLHttpRequest();
 var reqSkillInTraining = new XMLHttpRequest();
 var skillTreeRequest = new XMLHttpRequest();
 var skillQueue = new XMLHttpRequest();
+var ordersList = new XMLHttpRequest();
 var apikey = localStorage["apikey"];
 var userid = localStorage["userid"];
 var characterid = localStorage["characterid"];
@@ -30,6 +31,9 @@ function init() {
     reqCharacterSheet.open("GET", apiserver + "/char/CharacterSheet.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
     reqCharacterSheet.onload = recupInfosPerso;
     reqCharacterSheet.send(null);
+    ordersList.open("GET", apiserver + "/char/MarketOrders.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
+    ordersList.onload = drawOrders;
+    ordersList.send(null);
     setTimeout('window.location.reload()',600000);
 }
 
@@ -164,6 +168,7 @@ function getLibelleSkill(idSkill) {
         if (row.getAttribute("typeID") == idSkill && row.getAttribute("typeName") != null) {
             ret[0] = row.getAttribute("typeName");
             ret[1] = row.getElementsByTagName('rank')[0].textContent;
+            ret[2] = row.getElementsByTagName('description')[0].textContent;
             return ret;
         }
     }
@@ -250,11 +255,13 @@ function recupInfosPerso() {
         skillArr[i][3] = getLibelleSkill(row.getAttribute("typeID"))[1];
         skillArr[i][2] = row.getAttribute("level");
         skillArr[i][4] = row.getAttribute("skillpoints");
+        skillArr[i][5] = getLibelleSkill(row.getAttribute("typeID"))[2];
     }
     skillArr.sort();
     for (var i = 0, row; row = skillArr[i]; i++) {
 
         var trSkill = document.createElement("tr");
+        trSkill.setAttribute('title',row[5]);
         var lvImg = document.createElement('img');
         var tdSkill = document.createElement("td");
         var tdLevel = document.createElement("td");
@@ -343,7 +350,10 @@ function getGroupIDBySkillID(idSkill) {
     }
 }
 
+function drawOrders() {
+    var orders = orderList.responseXML.getElementsByTagName("row");
+    
 
-
+}
 
 
