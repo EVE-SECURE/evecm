@@ -1,7 +1,10 @@
 var compteur = [];
 var digit_del = ",";
 var tabcouleurfind = new Array();
-var apiserver = "http://api.eve-online.com";
+var parser = new DOMParser();
+var skillTreeDoc = parser.parseFromString(localStorage['skills'],'application/xhtml+xml');
+var conqStationsDoc = parser.parseFromString(localStorage['stations'],'application/xhtml+xml');
+var apiserver = "https://api.eveonline.com";
 
 
 var dateFin;
@@ -12,9 +15,9 @@ var divTimeLeft;
 
 var reqCharacterSheet = new XMLHttpRequest();
 var reqSkillInTraining = new XMLHttpRequest();
-var skillTreeRequest = new XMLHttpRequest();
 var skillQueue = new XMLHttpRequest();
 var ordersList = new XMLHttpRequest();
+var id2nameReq = new XMLHttpRequest();
 var apikey = localStorage["apikey"];
 var userid = localStorage["userid"];
 var characterid = localStorage["characterid"];
@@ -22,9 +25,6 @@ var cycleWait = localStorage['seconds'];
 
 
 function init() {
-
-    skillTreeRequest.open("GET", "skillTree.xml", false);
-    skillTreeRequest.send("");
     reqSkillInTraining.open("GET", apiserver + "/char/SkillInTraining.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
     reqSkillInTraining.onload = recupSkillInTraining;
     reqSkillInTraining.send(null);
@@ -34,6 +34,7 @@ function init() {
     ordersList.open("GET", apiserver + "/char/MarketOrders.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
     ordersList.onload = drawOrders;
     ordersList.send(null);
+    //id2name('1,2');
     setTimeout('window.location.reload()',600000);
 }
 
@@ -160,7 +161,6 @@ function recupSkillInTraining() {
 
 
 function getLibelleSkill(idSkill) {
-    var skillTreeDoc = skillTreeRequest.responseXML;
     var currentTypes = skillTreeDoc.getElementsByTagName("row");
     var ret = [];
 
@@ -213,7 +213,7 @@ function recupInfosPerso() {
 
     // Groups
     var listGroup = new Array();
-    var skillTreeDoc = skillTreeRequest.responseXML;
+    
     var groups = skillTreeDoc.getElementsByTagName("row");
 
     for (var i = 0, row; row = groups[i]; i++) {
@@ -341,7 +341,6 @@ function placeSkillInTableGroup(trSkill, listGroup) {
 }
 
 function getGroupIDBySkillID(idSkill) {
-    var skillTreeDoc = skillTreeRequest.responseXML;
     var currentTypes = skillTreeDoc.getElementsByTagName("row");
     for (var i = 0, row; row = currentTypes[i]; i++) {
         if (row.getAttribute("typeID") == idSkill && row.getAttribute("typeName") != null) {
@@ -351,9 +350,19 @@ function getGroupIDBySkillID(idSkill) {
 }
 
 function drawOrders() {
-    var orders = orderList.responseXML.getElementsByTagName("row");
+    var orders = ordersList.responseXML.getElementsByTagName("row");
     
 
 }
 
 
+function id2name(ids) {
+    id2nameReq.open("GET", apiserver + "/eve/CharacterName.xml.aspx?ids="+ids, false);
+    id2nameReq.onload = function() {
+
+       var res = id2nameReq.responseXML.getElementsByTagName('row')[0].getAttribute('name');
+       return res;
+    }
+    id2nameReq.send(null);
+
+}

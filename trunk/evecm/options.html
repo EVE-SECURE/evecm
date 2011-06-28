@@ -1,5 +1,5 @@
 <html>
-<head><title>Eve counter settings</title>
+<head><title>EveCM settings</title>
 <script type="text/javascript">
 
 function save_options() {
@@ -37,7 +37,8 @@ function restore_options() {
   document.getElementById("chars").appendChild(character);
   if (localStorage['seconds'] == 1000) {
       document.getElementById('seconds').checked = true;
-  } 
+  }
+  showSkillsStationsInfo();
 }
 
 
@@ -48,20 +49,45 @@ var req = new XMLHttpRequest();
   var uid = document.getElementById("uid").value;
   var key = document.getElementById("key").value;
   document.getElementById("chars").innerHTML="";
-  req.open("GET", "http://api.eve-online.com/account/Characters.xml.aspx?"+"userID="+uid+"&apiKey="+key, true);
+  req.open("GET", "https://api.eveonline.com/account/Characters.xml.aspx?"+"userID="+uid+"&apiKey="+key, true);
    req.onload = function(){
         var xml = req.responseXML;
         var chars = xml.getElementsByTagName('row');
-	for (var i=0, char; char = chars[i]; i++) {
+	for (var i=0, row; row = chars[i]; i++) {
 		var character = document.createElement("option");
-		character.value = char.getAttribute("characterID");
-		character.innerHTML = char.getAttribute("name");
+		character.value = row.getAttribute("characterID");
+		character.innerHTML = row.getAttribute("name");
 		document.getElementById("chars").appendChild(character);
 	}
     };
 
    req.send(null);
 
+}
+
+function updateSkillsStations () {
+    var d = new Date();
+    var skills = new XMLHttpRequest();
+    var stations = new XMLHttpRequest();
+    stations.open("GET", "https://api.eveonline.com/eve/ConquerableStationList.xml.aspx", true);
+    skills.open("GET", "https://api.eveonline.com/eve/SkillTree.xml.aspx", true);
+    stations.onload = function (){
+        localStorage['conqStations'] = stations.responseText;
+        localStorage['lastUpdate'] = d.toLocaleString();
+        skills.send(null);
+    }
+    skills.onload = function (){
+        localStorage['skills'] = skills.responseText;
+        alert(localStorage['skills']);
+        showSkillsStationsInfo();
+    }
+    stations.send(null);
+}
+
+function showSkillsStationsInfo() {
+    if (localStorage['lastUpdate']!=='')  {
+        document.getElementById('stationsskills').innerHTML = localStorage['lastUpdate'];
+    }
 }
 
 
@@ -78,5 +104,6 @@ Eve API key:<br>
 <button onclick="save_options()">Save</button>
 <button onclick="get_chars()">Get</button>
 <span id="status"></span><br>
+Stations List and SkillTree last update: <span id="stationsskills">none</span> <button onclick="updateSkillsStations ()">Update</button><br>
 </body>
 </html>
