@@ -13,7 +13,7 @@
     "popup": "popup.html"
   },
   "permissions": [
-    "http://api.eve-online.com/",
+    "https://api.eveonline.com/",
     "notifications"
   ]
 }
