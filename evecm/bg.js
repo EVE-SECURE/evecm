@@ -18,20 +18,20 @@ var reqSkillInTraining = new XMLHttpRequest();
 var skillQueue = new XMLHttpRequest();
 var ordersList = new XMLHttpRequest();
 var id2nameReq = new XMLHttpRequest();
-var apikey = localStorage["apikey"];
-var userid = localStorage["userid"];
+var vcode = localStorage["vcode"];
+var keyid = localStorage["keyid"];
 var characterid = localStorage["characterid"];
 var cycleWait = localStorage['seconds'];
 
 
 function init() {
-    reqSkillInTraining.open("GET", apiserver + "/char/SkillInTraining.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
+    reqSkillInTraining.open("GET", apiserver + "/char/SkillInTraining.xml.aspx?keyID=" + keyid + "&characterID=" + characterid + "&vCode=" + vcode, true);
     reqSkillInTraining.onload = recupSkillInTraining;
     reqSkillInTraining.send(null);
-    reqCharacterSheet.open("GET", apiserver + "/char/CharacterSheet.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
+    reqCharacterSheet.open("GET", apiserver + "/char/CharacterSheet.xml.aspx?keyID=" + keyid + "&characterID=" + characterid + "&vCode=" + vcode, true);
     reqCharacterSheet.onload = recupInfosPerso;
     reqCharacterSheet.send(null);
-    ordersList.open("GET", apiserver + "/char/MarketOrders.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
+    ordersList.open("GET", apiserver + "/char/MarketOrders.xml.aspx?keyID=" + keyid + "&characterID=" + characterid + "&vCode=" + vcode, true);
     ordersList.onload = drawOrders;
     ordersList.send(null);
     //id2name('1,2');
@@ -98,10 +98,11 @@ function queueCalc() {
         var tdSkillInfo = document.createElement('td');
         tdSkillInfo.setAttribute('class', 'queueInfo');
         var skillImage = document.createElement('img');
+        var imgSrc ="";
         if (i==0) {
-            var imgSrc = 'img/levelup'+queue[i][1]+'.gif';
+            imgSrc = 'img/levelup'+queue[i][1]+'.gif';
         } else {
-            var imgSrc = 'img/levelupf'+queue[i][1]+'.gif';
+            imgSrc = 'img/levelupf'+queue[i][1]+'.gif';
         }
         skillImage.setAttribute('src', imgSrc);
         tdSkillInfo.appendChild(skillImage);
@@ -142,7 +143,7 @@ function recupSkillInTraining() {
         var trainingEndTime = trainingEndTimeElement.textContent;
         dateFin = Date.parse(trainingEndTime);
         dateFin.addMinutes(new Date().getTimezoneOffset() * -1);
-        skillQueue.open("GET", apiserver + "/char/SkillQueue.xml.aspx?userID=" + userid + "&characterID=" + characterid + "&apiKey=" + apikey, true);
+        skillQueue.open("GET", apiserver + "/char/SkillQueue.xml.aspx?keyID=" + keyid + "&characterID=" + characterid + "&vCode=" + vcode, true);
         skillQueue.onload = queueCalc;
         skillQueue.send(null);
     } else {
@@ -217,7 +218,7 @@ function recupInfosPerso() {
     var groups = skillTreeDoc.getElementsByTagName("row");
 
     for (var i = 0, row; row = groups[i]; i++) {
-        if (row.getAttribute("groupName") != null && row.getAttribute("groupID") != null) {
+        if (row.getAttribute("groupName") !== null && row.getAttribute("groupID") != null) {
             var tableGroup = document.createElement("table");
             tableGroup.setAttribute("idGroup", row.getAttribute("groupID"));
             var trHeaderGroup = document.createElement("tr");
