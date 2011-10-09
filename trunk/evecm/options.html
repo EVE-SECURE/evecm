@@ -3,8 +3,8 @@
 <script type="text/javascript">
 
 function save_options() {
-  localStorage["userid"] = document.getElementById("uid").value;
-  localStorage["apikey"] = document.getElementById("key").value;
+  localStorage["keyid"] = document.getElementById("kid").value;
+  localStorage["vcode"] = document.getElementById("vcode").value;
   localStorage["characterid"] = document.getElementById("chars").children[document.getElementById("chars").selectedIndex].value;
   localStorage["charactername"] = document.getElementById("chars").children[document.getElementById("chars").selectedIndex].innerHTML;
   if (document.getElementById('seconds').checked == true) {
@@ -22,15 +22,15 @@ function save_options() {
 
 // Restores select box state to saved value from localStorage.
 function restore_options() {
-  var uid = localStorage["userid"];
-  var key = localStorage["apikey"];
+  var kid = localStorage["keyid"];
+  var vcode = localStorage["vcode"];
   var characterID = localStorage["characterid"];
   var characterName = localStorage["charactername"];
-  if (!uid || !key || !characterID || !characterName) {
+  if (!kid || !vcode || !characterID || !characterName) {
     return;
   }
-  document.getElementById("uid").value = uid;
-  document.getElementById("key").value = key;
+  document.getElementById("kid").value = kid;
+  document.getElementById("vcode").value = vcode;
   var character = document.createElement("option");
   character.value = characterID;
   character.innerHTML = characterName;
@@ -46,17 +46,17 @@ function restore_options() {
 function get_chars () {
 var req = new XMLHttpRequest();
 
-  var uid = document.getElementById("uid").value;
-  var key = document.getElementById("key").value;
+  var kid = document.getElementById("kid").value;
+  var vcode = document.getElementById("vcode").value;
   document.getElementById("chars").innerHTML="";
-  req.open("GET", "https://api.eveonline.com/account/Characters.xml.aspx?"+"userID="+uid+"&apiKey="+key, true);
+  req.open("GET", "https://api.eveonline.com/account/APIKeyInfo.xml.aspx?"+"keyID="+kid+"&vCode="+vcode, true);
    req.onload = function(){
         var xml = req.responseXML;
         var chars = xml.getElementsByTagName('row');
 	for (var i=0, row; row = chars[i]; i++) {
 		var character = document.createElement("option");
 		character.value = row.getAttribute("characterID");
-		character.innerHTML = row.getAttribute("name");
+                character.innerHTML = row.getAttribute("characterName");
 		document.getElementById("chars").appendChild(character);
 	}
     };
@@ -97,8 +97,8 @@ function showSkillsStationsInfo() {
 <body onload="restore_options()">
 
 Eve API key:<br>
-<input type="text" id="uid" size="15"><br>
-<input type="text" id="key" size="100"><br>
+<input type="text" id="kid" size="15"><br>
+<input type="text" id="vcode" size="100"><br>
 <select id="chars"></select><br>
 <input type="checkbox" id="seconds"> Display seconds in tooltip count<br>
 <button onclick="save_options()">Save</button>
