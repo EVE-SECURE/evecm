@@ -17,7 +17,6 @@ var reqCharacterSheet = new XMLHttpRequest();
 var reqSkillInTraining = new XMLHttpRequest();
 var skillQueue = new XMLHttpRequest();
 var ordersList = new XMLHttpRequest();
-var id2nameReq = new XMLHttpRequest();
 var vcode = localStorage["vcode"];
 var keyid = localStorage["keyid"];
 var characterid = localStorage["characterid"];
@@ -351,37 +350,71 @@ function getGroupIDBySkillID(idSkill) {
 }
 
 function drawOrders() {
-    var ids = [];
+    var tIds = [];
+    var sIds = [];
+    var total = 0;
     var orders = ordersList.responseXML.getElementsByTagName("row");
     for (var i=0, row; row = orders[i]; i++) {
-        var orderTr = document.createElement('tr');
-        var station = row.getAttribute('stationID');
-        var type = row.getAttribute('typeID');
-        var rem = row.getAttribute('volRemaining');
-        var price = row.getAttribute('price');
-        var dur = row.getAttribute('duration');
-        var issued = row.getAttribute('issued');
-        ids = distinctAdd(ids,station);
-        ids = distinctAdd(ids,type);
-        orderTr.innerHTML = '<td id=\''+station+'\'></td><td id=\'+type+\'></td><td>'+rem+'</td><td>'+Math.round(price*rem)+'</td><td>'+dur+'</td>';
-        document.getElementById('ordersList').appendChild(orderTr);
+        if (row.getAttribute('orderState')==0) {
+            var orderTr = document.createElement('tr');
+            var station = row.getAttribute('stationID');
+            var type = row.getAttribute('typeID');
+            var rem = row.getAttribute('volRemaining');
+            var price = row.getAttribute('price');
+            var dur = row.getAttribute('duration');
+            var issued = row.getAttribute('issued');
+            var summ = Math.round(price*rem);
+            total = summ+total;
+            sIds = distinctAdd(sIds,station);
+            tIds = distinctAdd(tIds,type);
+            orderTr.innerHTML = '<td id=\''+station+'\'></td><td id=\''+type+'\'></td><td>'+rem+'</td><td>'+delim(summ)+'</td><td>'+dur+'</td>';
+            document.getElementById('ordersList').appendChild(orderTr);
+        }
 
     }
-    id2name(ids);
+    id2types(tIds);
+    id2stNames(sIds);
+    document.getElementById('ordersSumm').innerText = delim(total);
 
 
 }
 
 
-function id2name(ids) {
+function id2types(ids) {
+    var id2nameReq = new XMLHttpRequest();
     var idsSrt = ids.join();
     id2nameReq.open("GET", apiserver + "/eve/CharacterName.xml.aspx?ids="+ids, false);
     id2nameReq.onload = function() {
 
-       var res = id2nameReq.responseXML.getElementsByTagName('row')[0].getAttribute('name');
-       return res;
+       var res = id2nameReq.responseXML.getElementsByTagName('row');
+        for (var i=0,row; row=res[i]; i++){
+            document.getElementById(row.getAttribute('characterID')).innerText = row.getAttribute('name');
+        }
     }
     id2nameReq.send(null);
+}
+
+function id2stNames(ids) {
+    var npcS = new XMLHttpRequest();
+    pcS = conqStationsDoc.getElementsByTagName('row');
+    npcS.open("GET","/res/npcStations.xml", false);
+    npcS.onload = function() {
+
+         var   res = npcS.responseXML;
+         for (var k=0, irow; irow=ids[k]; k++) {
+             for (var i=0,row; row=pcS[i]; i++){
+                 if (irow==row.getAttribute('stationID')) {
+                     document.getelementById(irow).innerText = row.getAttribute('stationName');
+                     irow=(-1);
+                 }
+             }
+             if (irow!==(-1)) {
+                 var b = res.getElementById(irow);
+                 document.getElementById(irow).innerText = b.getAttribute('stationName');
+             }
+         }
+    }
+    npcS.send(null);
 
 }
 
