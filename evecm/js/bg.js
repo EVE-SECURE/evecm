@@ -351,13 +351,30 @@ function getGroupIDBySkillID(idSkill) {
 }
 
 function drawOrders() {
+    var ids = [];
     var orders = ordersList.responseXML.getElementsByTagName("row");
-    
+    for (var i=0, row; row = orders[i]; i++) {
+        var orderTr = document.createElement('tr');
+        var station = row.getAttribute('stationID');
+        var type = row.getAttribute('typeID');
+        var rem = row.getAttribute('volRemaining');
+        var price = row.getAttribute('price');
+        var dur = row.getAttribute('duration');
+        var issued = row.getAttribute('issued');
+        ids = distinctAdd(ids,station);
+        ids = distinctAdd(ids,type);
+        orderTr.innerHTML = '<td id=\''+station+'\'></td><td id=\'+type+\'></td><td>'+rem+'</td><td>'+Math.round(price*rem)+'</td><td>'+dur+'</td>';
+        document.getElementById('ordersList').appendChild(orderTr);
+
+    }
+    id2name(ids);
+
 
 }
 
 
 function id2name(ids) {
+    var idsSrt = ids.join();
     id2nameReq.open("GET", apiserver + "/eve/CharacterName.xml.aspx?ids="+ids, false);
     id2nameReq.onload = function() {
 
@@ -366,4 +383,13 @@ function id2name(ids) {
     }
     id2nameReq.send(null);
 
+}
+
+function distinctAdd(arr,val) {
+    var has = 0;
+    for (var i=0, row; row=arr[i]; i++){
+        if (row==val) has = 1;
+    }
+    if (has==0) arr.push(val);
+    return arr;
 }
