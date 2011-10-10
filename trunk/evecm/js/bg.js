@@ -396,7 +396,7 @@ function id2types(ids) {
 
 function id2stNames(ids) {
     var npcS = new XMLHttpRequest();
-    pcS = conqStationsDoc.getElementsByTagName('row');
+    var pcS = conqStationsDoc.getElementsByTagName('row');
     npcS.open("GET","/res/npcStations.xml", false);
     npcS.onload = function() {
 
@@ -405,10 +405,10 @@ function id2stNames(ids) {
              for (var i=0,row; row=pcS[i]; i++){
                  if (irow==row.getAttribute('stationID')) {
                      document.getelementById(irow).innerText = row.getAttribute('stationName');
-                     irow=(-1);
+                     irow=0;
                  }
              }
-             if (irow!==(-1)) {
+             if (irow!==0) {
                  var b = res.getElementById(irow);
                  document.getElementById(irow).innerText = b.getAttribute('stationName');
              }
