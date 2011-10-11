@@ -132,3 +132,25 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that th
 .tab_content {
 	padding: 3px;
 }
+
+#ordersList {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    border-collapse:collapse;
+
+}
+
+#ordersList tbody tr td {
+
+    border: 1px solid black;
+    border-collapse:collapse;
+
+}
+
+#summCont {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+    position:relative;
+    left:30;
+
+}

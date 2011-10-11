@@ -3,7 +3,7 @@ var digit_del = ",";
 var tabcouleurfind = new Array();
 var parser = new DOMParser();
 var skillTreeDoc = parser.parseFromString(localStorage['skills'],'application/xhtml+xml');
-var conqStationsDoc = parser.parseFromString(localStorage['stations'],'application/xhtml+xml');
+var conqStationsDoc = parser.parseFromString(localStorage['conqStations'],'application/xhtml+xml');
 var apiserver = "https://api.eveonline.com";
 
 
@@ -367,7 +367,7 @@ function drawOrders() {
             total = summ+total;
             sIds = distinctAdd(sIds,station);
             tIds = distinctAdd(tIds,type);
-            orderTr.innerHTML = '<td id=\''+station+'\'></td><td id=\''+type+'\'></td><td>'+rem+'</td><td>'+delim(summ)+'</td><td>'+dur+'</td>';
+            orderTr.innerHTML = '<td class=\'s'+station+'\'></td><td class=\'t'+type+'\'></td><td>'+rem+'</td><td>'+delim(summ)+'</td><td>'+dur+'</td>';
             document.getElementById('ordersList').appendChild(orderTr);
         }
 
@@ -388,7 +388,10 @@ function id2types(ids) {
 
        var res = id2nameReq.responseXML.getElementsByTagName('row');
         for (var i=0,row; row=res[i]; i++){
-            document.getElementById(row.getAttribute('characterID')).innerText = row.getAttribute('name');
+            for (var k=0, trow; trow=document.getElementsByClassName('t'+row.getAttribute('characterID'))[k]; k++) {
+
+                trow.innerText = row.getAttribute('name');
+            }
         }
     }
     id2nameReq.send(null);
@@ -400,17 +403,24 @@ function id2stNames(ids) {
     npcS.open("GET","/res/npcStations.xml", false);
     npcS.onload = function() {
 
-         var   res = npcS.responseXML;
+        var   res = npcS.responseXML;
          for (var k=0, irow; irow=ids[k]; k++) {
              for (var i=0,row; row=pcS[i]; i++){
                  if (irow==row.getAttribute('stationID')) {
-                     document.getelementById(irow).innerText = row.getAttribute('stationName');
+                     for (var l=0, trow; trow=document.getElementsByClassName('s'+irow)[l]; l++) {
+
+                         trow.innerText = row.getAttribute('stationName');
+
+                     }
                      irow=0;
                  }
              }
              if (irow!==0) {
                  var b = res.getElementById(irow);
-                 document.getElementById(irow).innerText = b.getAttribute('stationName');
+                 for (var l=0, trow; trow=document.getElementsByClassName('s'+irow)[l]; l++) {
+
+                     trow.innerText = b.getAttribute('stationName');
+                 }
              }
          }
     }
