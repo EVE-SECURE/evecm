@@ -400,7 +400,7 @@ function id2types(ids) {
 }
 
 function id2stNames(ids) {
-    var sysRe = /^(\w+)\s(\w+)\s/;
+    var sysRe = /^\S+\s\S+/;
     var npcS = new XMLHttpRequest();
     var pcS = conqStationsDoc.getElementsByTagName('row');
     npcS.open("GET","/res/npcStations.xml", false);
@@ -413,7 +413,7 @@ function id2stNames(ids) {
                      for (var l=0, trow; trow=document.getElementsByClassName('s'+irow)[l]; l++) {
                          var stName = row.getAttribute('stationName');
                          trow.setAttribute('title',stName);
-                         trow.innerText = stName.replace(sysRe,"$1 $2");
+                         trow.innerText = stName.match(sysRe);
 
                      }
                      irow=0;
@@ -423,8 +423,8 @@ function id2stNames(ids) {
                  var b = res.getElementById(irow);
                  for (var l=0, trow; trow=document.getElementsByClassName('s'+irow)[l]; l++) {
                      var stName = b.getAttribute('stationName');
-                     row.setAttribute('title',stName);
-                     trow.innerText = stName.replace(sysRe,"$1 $2");
+                     trow.setAttribute('title',stName);
+                     trow.innerText = stName.match(sysRe);
                  }
              }
          }
