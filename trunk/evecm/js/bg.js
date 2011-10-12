@@ -354,20 +354,22 @@ function drawOrders() {
     var sIds = [];
     var total = 0;
     var orders = ordersList.responseXML.getElementsByTagName("row");
+
     for (var i=0, row; row = orders[i]; i++) {
         if (row.getAttribute('orderState')==0) {
             var orderTr = document.createElement('tr');
             var station = row.getAttribute('stationID');
             var type = row.getAttribute('typeID');
             var rem = row.getAttribute('volRemaining');
+            var vol = rem+'/'+row.getAttribute('volEntered');
             var price = row.getAttribute('price');
-            var dur = row.getAttribute('duration');
+            var dur = differenceDates(orderExpire(row.getAttribute('issued'),row.getAttribute('duration')),0)[4];
             var issued = row.getAttribute('issued');
             var summ = Math.round(price*rem);
             total = summ+total;
             sIds = distinctAdd(sIds,station);
             tIds = distinctAdd(tIds,type);
-            orderTr.innerHTML = '<td class=\'s'+station+'\'></td><td class=\'t'+type+'\'></td><td>'+rem+'</td><td>'+delim(summ)+'</td><td>'+dur+'</td>';
+            orderTr.innerHTML = '<td class=\'s'+station+'\'></td><td class=\'t'+type+'\'></td><td>'+vol+'</td><td>'+delim(summ)+'</td><td>'+dur+'</td>';
             document.getElementById('ordersList').appendChild(orderTr);
         }
 
@@ -398,6 +400,7 @@ function id2types(ids) {
 }
 
 function id2stNames(ids) {
+    var sysRe = /^(\w+)\s(\w+)\s/;
     var npcS = new XMLHttpRequest();
     var pcS = conqStationsDoc.getElementsByTagName('row');
     npcS.open("GET","/res/npcStations.xml", false);
@@ -408,8 +411,9 @@ function id2stNames(ids) {
              for (var i=0,row; row=pcS[i]; i++){
                  if (irow==row.getAttribute('stationID')) {
                      for (var l=0, trow; trow=document.getElementsByClassName('s'+irow)[l]; l++) {
-
-                         trow.innerText = row.getAttribute('stationName');
+                         var stName = row.getAttribute('stationName');
+                         trow.setAttribute('title',stName);
+                         trow.innerText = stName.replace(sysRe,"$1 $2");
 
                      }
                      irow=0;
@@ -418,8 +422,9 @@ function id2stNames(ids) {
              if (irow!==0) {
                  var b = res.getElementById(irow);
                  for (var l=0, trow; trow=document.getElementsByClassName('s'+irow)[l]; l++) {
-
-                     trow.innerText = b.getAttribute('stationName');
+                     var stName = b.getAttribute('stationName');
+                     row.setAttribute('title',stName);
+                     trow.innerText = stName.replace(sysRe,"$1 $2");
                  }
              }
          }
