@@ -62,6 +62,13 @@ function differenceDates(d,cw) {
     return ret;
 }
 
+function orderExpire(start,dur){
+    var startDate = Date.parse(start);
+    startDate.addMinutes(new Date().getTimezoneOffset() * -1);
+    startDate.addDays(dur);
+    return startDate;
+}
+
 function getMaxSP(lv, rank) {
     return Math.ceil(Math.pow(2, ((2.5 * parseInt(lv)) - 2.5)) * 250 * rank);
 
