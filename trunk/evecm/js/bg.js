@@ -385,14 +385,14 @@ function drawOrders() {
 function id2types(ids) {
     var id2nameReq = new XMLHttpRequest();
     var idsSrt = ids.join();
-    id2nameReq.open("GET", apiserver + "/eve/CharacterName.xml.aspx?ids="+ids, false);
+    id2nameReq.open("GET", apiserver + "/eve/typeName.xml.aspx?ids="+ids, false);
     id2nameReq.onload = function() {
 
        var res = id2nameReq.responseXML.getElementsByTagName('row');
         for (var i=0,row; row=res[i]; i++){
-            for (var k=0, trow; trow=document.getElementsByClassName('t'+row.getAttribute('characterID'))[k]; k++) {
+            for (var k=0, trow; trow=document.getElementsByClassName('t'+row.getAttribute('typeID'))[k]; k++) {
 
-                trow.innerText = row.getAttribute('name');
+                trow.innerText = row.getAttribute('typeName');
             }
         }
     }
