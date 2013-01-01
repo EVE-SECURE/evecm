@@ -34,7 +34,7 @@ function init() {
     ordersList.onload = drawOrders;
     ordersList.send(null);
     //id2name('1,2');
-    setTimeout('window.location.reload()',600000);
+    window.setTimeout(function(){ window.location.reload() },600000);
 }
 
 function refreshDateFin() {
@@ -56,7 +56,7 @@ function refreshDateFin() {
     chrome.browserAction.setBadgeBackgroundColor({
         color: compteur[2]
     });
-    setTimeout("refreshDateFin()",cycleWait )
+    setTimeout(function(){ refreshDateFin() },cycleWait )
 }
 
 function drawToolTip() {
@@ -441,3 +441,7 @@ function distinctAdd(arr,val) {
     if (has==0) arr.push(val);
     return arr;
 }
+
+
+if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", init, false);

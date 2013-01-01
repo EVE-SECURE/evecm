@@ -1,19 +1,21 @@
 {
   "name": "EveCM",
-  "version": "0.6.0",
+  "manifest_version": 2,
+  "version": "0.7.0",
   "description": "Eve-online character monitoring(skills,queue,orders)",
   "options_page": "options.html",
-  "background_page": "background.html",
+  "background": {"page": "background.html"},
    "icons": {
     "128": "icon128.png"
   },
   "browser_action": {
     "default_icon": "icon.png",
     "default_title": "EveCM",
-    "popup": "popup.html"
+    "default_popup": "popup.html"
   },
   "permissions": [
     "https://api.eveonline.com/",
     "notifications"
-  ]
+  ],
+  "content_security_policy": "script-src 'self'  https://api.eveonline.com; object-src 'self' "
 }
