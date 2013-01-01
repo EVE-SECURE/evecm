@@ -27,7 +27,7 @@ function updateCounters() {
         document.getElementById('prog'+row.getAttribute('skillId')).setAttribute('width',spPrec[0]+'%');
 
     }
-    setTimeout("updateCounters()",1000);
+    setTimeout(function(){ updateCounters() },1000);
 }
 
 function replaceSP(st,rp) {
@@ -52,3 +52,5 @@ function initTabs() {
 		return false;
 	});
 }
+if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", init, false);

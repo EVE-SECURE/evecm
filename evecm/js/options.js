@@ -145,3 +145,12 @@ function showKeyInfo(mask,type) {
 
 
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    restore_options();
+    document.getElementById("get_chars").addEventListener("click", get_chars);
+    document.getElementById("update_xml").addEventListener("click", updateXml);
+    document.getElementById("save_options").addEventListener("click", save_options);
+});
+
+
